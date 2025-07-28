@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 services:
   elasticsearch:
     container_name: es-container
@@ -29,11 +30,42 @@ services:
       - elasticsearch
     ports:
       - "5601:5601"
+=======
+version: '3.8'
+
+services:
+  elasticsearch:
+    container_name: es-container
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.13.4
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - ES_JAVA_OPTS=-XX:-UseContainerSupport
+    ports:
+      - 9200:9200
+    networks:
+      - es-net
+
+  kibana:
+    container_name: kb-container
+    image: docker.elastic.co/kibana/kibana:8.13.4
+    environment:
+      - ELASTICSEARCH_HOSTS=http://es-container:9200
+    depends_on:
+      - elasticsearch
+    ports:
+      - 5601:5601
+    networks:
+      - es-net
+>>>>>>> c87a8097b64d98c0b47875e4e5d065d20ad770ba
 
 networks:
   es-net:
     driver: bridge
+<<<<<<< HEAD
 
 volumes:
   es-data:
     driver: local
+=======
+>>>>>>> c87a8097b64d98c0b47875e4e5d065d20ad770ba
