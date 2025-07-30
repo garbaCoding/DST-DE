@@ -1,0 +1,10 @@
+{
+  "size": 0,
+  "aggs": {
+    "unique_class_name": {
+      "cardinality": {
+        "field": "Class Name.keyword"
+      }
+    }
+  }
+}

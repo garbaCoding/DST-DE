@@ -1,0 +1,10 @@
+{
+  "size": 0,
+  "aggs": {
+    "nombre_article": {
+      "cardinality": {
+        "field": "Clothing ID"
+      }
+    }
+  }
+}

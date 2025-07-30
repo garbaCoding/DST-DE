@@ -1,0 +1,10 @@
+{
+  "size": 0,
+  "aggs": {
+    "unique_division_name": {
+      "cardinality": {
+        "field": "Division Name.keyword"
+      }
+    }
+  }
+}
