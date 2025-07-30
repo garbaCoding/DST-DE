@@ -1,0 +1,50 @@
+{
+  "took": 3,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 10000,
+      "relation": "gte"
+    },
+    "max_score": null,
+    "hits": []
+  },
+  "aggregations": {
+    "extended_rating_stats": {
+      "count": 23486,
+      "min": 1.0,
+      "max": 5.0,
+      "avg": 4.196031678446734,
+      "sum": 98548.0,
+      "sum_of_squares": 442448.0,
+      "variance": 1.2321157350094194,
+      "variance_population": 1.2321157350094194,
+      "variance_sampling": 1.2321681989538524,
+      "std_deviation": 1.1100070878194515,
+      "std_deviation_population": 1.1100070878194515,
+      "std_deviation_sampling": 1.1100307198243895,
+      "std_deviation_bounds": {
+        "upper": 6.416045854085636,
+        "lower": 1.976017502807831,
+        "upper_population": 6.416045854085636,
+        "lower_population": 1.976017502807831,
+        "upper_sampling": 6.416093118095513,
+        "lower_sampling": 1.975970238797955
+      }
+    },
+    "avg_rating": {
+      "value": 4.196031678446734
+    },
+    "median_rating": {
+      "values": {
+        "50.0": 4.8326131069284415
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "size": 0,
+  "aggs": {
+    "extended_rating_stats": {
+      "extended_stats": {
+        "field": "Rating"
+      }
+    },
+    "avg_rating": {
+      "avg": {
+        "field": "Rating"
+      }
+    },
+    "median_rating": {
+      "percentiles": {
+        "field": "Rating",
+        "percents": [
+          50
+        ]
+      }
+    }
+  }
+}

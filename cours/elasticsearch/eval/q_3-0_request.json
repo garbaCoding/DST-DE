@@ -1,0 +1,45 @@
+{
+  "size": 0,
+  "aggs": {
+    "missing_clothing_id": {
+      "missing": {
+        "field": "Clothing ID"
+      }
+    },
+    "missing_age": {
+      "missing": {
+        "field": "Age"
+      }
+    },
+    "missing_rating": {
+      "missing": {
+        "field": "Rating"
+      }
+    },
+    "missing_recommended_ind": {
+      "missing": {
+        "field": "Recommended IND"
+      }
+    },
+    "missing_positive_feedback_count": {
+      "missing": {
+        "field": "Positive Feedback Count"
+      }
+    },
+    "missing_division_name": {
+      "missing": {
+        "field": "Division Name.keyword"
+      }
+    },
+    "missing_department_name": {
+      "missing": {
+        "field": "Department Name.keyword"
+      }
+    },
+    "missing_class_name": {
+      "missing": {
+        "field": "Class Name.keyword"
+      }
+    }
+  }
+}

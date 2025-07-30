@@ -11,21 +11,29 @@ client = Elasticsearch(hosts = "http://localhost:9200")
 
 # Préciser le numéro de votre question ici.
 # Si vous effectuez plusieurs requêtes pour la même question, écrivez "1-1", "1-2" ext...
-question_number = "2-5"
+question_number = "4-2"
 
 # Copier coller votre requête Kibana ici (SANS l'instruction GET)
 query = {
-    "size": 0,
-    "aggs": {
-        "par_division": {
-            "terms": {"field": "Division Name.keyword"},
-            "aggs": {
-                "par_department": {
-                    "terms": {"field": "Department Name.keyword"}
-                }
-            }
-        }
+  "size": 0,
+  "aggs": {
+    "extended_rating_stats":{
+      "extended_stats": {
+        "field": "Rating"
+      }
+    },
+    "avg_rating": {
+      "avg": {
+        "field": "Rating"
+      }
+    },
+    "median_rating": {
+      "percentiles": {
+        "field": "Rating",
+        "percents": [50]
+      }
     }
+  }
 }
 
 response = client.search(index="eval", body=query)
