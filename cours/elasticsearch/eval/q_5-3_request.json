@@ -1,0 +1,24 @@
+{
+  "size": 0,
+  "query": {
+    "range": {
+      "Rating": {
+        "gte": 4
+      }
+    }
+  },
+  "aggs": {
+    "par_produit": {
+      "terms": {
+        "field": "Class Name.keyword"
+      },
+      "aggs": {
+        "nombre_avis": {
+          "value_count": {
+            "field": "Rating"
+          }
+        }
+      }
+    }
+  }
+}

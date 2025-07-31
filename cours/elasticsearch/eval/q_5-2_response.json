@@ -1,0 +1,106 @@
+{
+  "took": 1,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 842,
+      "relation": "eq"
+    },
+    "max_score": null,
+    "hits": []
+  },
+  "aggregations": {
+    "top_terms_review": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 21733,
+      "buckets": [
+        {
+          "key": "i",
+          "doc_count": 664
+        },
+        {
+          "key": "look",
+          "doc_count": 343
+        },
+        {
+          "key": "so",
+          "doc_count": 319
+        },
+        {
+          "key": "like",
+          "doc_count": 296
+        },
+        {
+          "key": "veri",
+          "doc_count": 262
+        },
+        {
+          "key": "fit",
+          "doc_count": 240
+        },
+        {
+          "key": "have",
+          "doc_count": 239
+        },
+        {
+          "key": "my",
+          "doc_count": 219
+        },
+        {
+          "key": "dress",
+          "doc_count": 214
+        },
+        {
+          "key": "fabric",
+          "doc_count": 199
+        },
+        {
+          "key": "top",
+          "doc_count": 187
+        },
+        {
+          "key": "love",
+          "doc_count": 181
+        },
+        {
+          "key": "size",
+          "doc_count": 180
+        },
+        {
+          "key": "order",
+          "doc_count": 175
+        },
+        {
+          "key": "back",
+          "doc_count": 173
+        },
+        {
+          "key": "return",
+          "doc_count": 172
+        },
+        {
+          "key": "me",
+          "doc_count": 168
+        },
+        {
+          "key": "would",
+          "doc_count": 167
+        },
+        {
+          "key": "just",
+          "doc_count": 163
+        },
+        {
+          "key": "wear",
+          "doc_count": 162
+        }
+      ]
+    }
+  }
+}

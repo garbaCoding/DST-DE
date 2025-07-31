@@ -1,0 +1,106 @@
+{
+  "took": 1,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 10000,
+      "relation": "gte"
+    },
+    "max_score": null,
+    "hits": []
+  },
+  "aggregations": {
+    "top_terms_review": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 329360,
+      "buckets": [
+        {
+          "key": "i",
+          "doc_count": 10340
+        },
+        {
+          "key": "love",
+          "doc_count": 5856
+        },
+        {
+          "key": "fit",
+          "doc_count": 5412
+        },
+        {
+          "key": "so",
+          "doc_count": 5085
+        },
+        {
+          "key": "my",
+          "doc_count": 4397
+        },
+        {
+          "key": "size",
+          "doc_count": 4136
+        },
+        {
+          "key": "wear",
+          "doc_count": 4092
+        },
+        {
+          "key": "dress",
+          "doc_count": 3935
+        },
+        {
+          "key": "color",
+          "doc_count": 3694
+        },
+        {
+          "key": "look",
+          "doc_count": 3562
+        },
+        {
+          "key": "veri",
+          "doc_count": 3496
+        },
+        {
+          "key": "great",
+          "doc_count": 3438
+        },
+        {
+          "key": "have",
+          "doc_count": 3325
+        },
+        {
+          "key": "top",
+          "doc_count": 3042
+        },
+        {
+          "key": "like",
+          "doc_count": 2869
+        },
+        {
+          "key": "am",
+          "doc_count": 2736
+        },
+        {
+          "key": "perfect",
+          "doc_count": 2677
+        },
+        {
+          "key": "i'm",
+          "doc_count": 2628
+        },
+        {
+          "key": "me",
+          "doc_count": 2528
+        },
+        {
+          "key": "up",
+          "doc_count": 2459
+        }
+      ]
+    }
+  }
+}

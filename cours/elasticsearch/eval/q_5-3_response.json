@@ -1,0 +1,96 @@
+{
+  "took": 0,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 10000,
+      "relation": "gte"
+    },
+    "max_score": null,
+    "hits": []
+  },
+  "aggregations": {
+    "par_produit": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 1446,
+      "buckets": [
+        {
+          "key": "Dresses",
+          "doc_count": 4792,
+          "nombre_avis": {
+            "value": 4792
+          }
+        },
+        {
+          "key": "Knits",
+          "doc_count": 3721,
+          "nombre_avis": {
+            "value": 3721
+          }
+        },
+        {
+          "key": "Blouses",
+          "doc_count": 2355,
+          "nombre_avis": {
+            "value": 2355
+          }
+        },
+        {
+          "key": "Pants",
+          "doc_count": 1107,
+          "nombre_avis": {
+            "value": 1107
+          }
+        },
+        {
+          "key": "Sweaters",
+          "doc_count": 1078,
+          "nombre_avis": {
+            "value": 1078
+          }
+        },
+        {
+          "key": "Jeans",
+          "doc_count": 947,
+          "nombre_avis": {
+            "value": 947
+          }
+        },
+        {
+          "key": "Fine gauge",
+          "doc_count": 876,
+          "nombre_avis": {
+            "value": 876
+          }
+        },
+        {
+          "key": "Skirts",
+          "doc_count": 752,
+          "nombre_avis": {
+            "value": 752
+          }
+        },
+        {
+          "key": "Jackets",
+          "doc_count": 569,
+          "nombre_avis": {
+            "value": 569
+          }
+        },
+        {
+          "key": "Lounge",
+          "doc_count": 565,
+          "nombre_avis": {
+            "value": 565
+          }
+        }
+      ]
+    }
+  }
+}

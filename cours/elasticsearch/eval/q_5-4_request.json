@@ -1,0 +1,30 @@
+{
+  "aggs": {
+    "par_produit": {
+      "terms": {
+        "field": "Class Name.keyword"
+      },
+      "aggs": {
+        "note_moyenne": {
+          "avg": {
+            "field": "Rating"
+          }
+        },
+        "nombre_avis": {
+          "value_count": {
+            "field": "Rating"
+          }
+        },
+        "filtre_et": {
+          "bucket_selector": {
+            "buckets_path": {
+              "nb_avis": "nombre_avis",
+              "avg_note": "note_moyenne"
+            },
+            "script": "params.avg_note < 1.5 && params.nb_avis > 100"
+          }
+        }
+      }
+    }
+  }
+}
