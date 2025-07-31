@@ -1,0 +1,19 @@
+{
+  "size": 0,
+  "aggs": {
+    "age_distribution": {
+      "histogram": {
+        "field": "Age",
+        "interval": 20,
+        "min_doc_count": 0
+      },
+      "aggs": {
+        "stat_par_age": {
+          "terms": {
+            "field": "Class Name.keyword"
+          }
+        }
+      }
+    }
+  }
+}

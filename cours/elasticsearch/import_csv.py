@@ -17,10 +17,14 @@ mapping = {
         "type": "integer"
       },
       "Title": {
-        "type": "text"
+        "type": "text",
+        "analyzer": "english",
+        "fielddata": True
       },
       "Review Text": {
-        "type": "text"
+        "type": "text",
+        "analyzer": "english",
+        "fielddata": True
       },
       "Rating": {
         "type": "integer"

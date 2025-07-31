@@ -1,572 +1,5 @@
 {
-  ".internal.alerts-observability.slo.alerts-default-000001": {
-    "mappings": {
-      "dynamic": "false",
-      "_meta": {
-        "namespace": "default",
-        "kibana": {
-          "version": "8.15.0"
-        },
-        "managed": true
-      },
-      "properties": {
-        "@timestamp": {
-          "type": "date",
-          "ignore_malformed": false
-        },
-        "ecs": {
-          "properties": {
-            "version": {
-              "type": "keyword"
-            }
-          }
-        },
-        "event": {
-          "properties": {
-            "action": {
-              "type": "keyword"
-            },
-            "kind": {
-              "type": "keyword"
-            }
-          }
-        },
-        "kibana": {
-          "properties": {
-            "alert": {
-              "properties": {
-                "action_group": {
-                  "type": "keyword"
-                },
-                "case_ids": {
-                  "type": "keyword"
-                },
-                "consecutive_matches": {
-                  "type": "long"
-                },
-                "context": {
-                  "type": "object"
-                },
-                "duration": {
-                  "properties": {
-                    "us": {
-                      "type": "long"
-                    }
-                  }
-                },
-                "end": {
-                  "type": "date"
-                },
-                "evaluation": {
-                  "properties": {
-                    "threshold": {
-                      "type": "scaled_float",
-                      "scaling_factor": 100.0
-                    },
-                    "value": {
-                      "type": "scaled_float",
-                      "scaling_factor": 100.0
-                    },
-                    "values": {
-                      "type": "scaled_float",
-                      "scaling_factor": 100.0
-                    }
-                  }
-                },
-                "flapping": {
-                  "type": "boolean"
-                },
-                "flapping_history": {
-                  "type": "boolean"
-                },
-                "group": {
-                  "properties": {
-                    "field": {
-                      "type": "keyword"
-                    },
-                    "value": {
-                      "type": "keyword"
-                    }
-                  }
-                },
-                "instance": {
-                  "properties": {
-                    "id": {
-                      "type": "keyword"
-                    }
-                  }
-                },
-                "last_detected": {
-                  "type": "date"
-                },
-                "maintenance_window_ids": {
-                  "type": "keyword"
-                },
-                "previous_action_group": {
-                  "type": "keyword"
-                },
-                "reason": {
-                  "type": "keyword",
-                  "fields": {
-                    "text": {
-                      "type": "match_only_text"
-                    }
-                  }
-                },
-                "risk_score": {
-                  "type": "float"
-                },
-                "rule": {
-                  "properties": {
-                    "author": {
-                      "type": "keyword"
-                    },
-                    "category": {
-                      "type": "keyword"
-                    },
-                    "consumer": {
-                      "type": "keyword"
-                    },
-                    "created_at": {
-                      "type": "date"
-                    },
-                    "created_by": {
-                      "type": "keyword"
-                    },
-                    "description": {
-                      "type": "keyword"
-                    },
-                    "enabled": {
-                      "type": "keyword"
-                    },
-                    "execution": {
-                      "properties": {
-                        "timestamp": {
-                          "type": "date"
-                        },
-                        "uuid": {
-                          "type": "keyword"
-                        }
-                      }
-                    },
-                    "from": {
-                      "type": "keyword"
-                    },
-                    "interval": {
-                      "type": "keyword"
-                    },
-                    "license": {
-                      "type": "keyword"
-                    },
-                    "name": {
-                      "type": "keyword"
-                    },
-                    "note": {
-                      "type": "keyword"
-                    },
-                    "parameters": {
-                      "type": "flattened",
-                      "ignore_above": 4096
-                    },
-                    "producer": {
-                      "type": "keyword"
-                    },
-                    "references": {
-                      "type": "keyword"
-                    },
-                    "revision": {
-                      "type": "long"
-                    },
-                    "rule_id": {
-                      "type": "keyword"
-                    },
-                    "rule_name_override": {
-                      "type": "keyword"
-                    },
-                    "rule_type_id": {
-                      "type": "keyword"
-                    },
-                    "tags": {
-                      "type": "keyword"
-                    },
-                    "to": {
-                      "type": "keyword"
-                    },
-                    "type": {
-                      "type": "keyword"
-                    },
-                    "updated_at": {
-                      "type": "date"
-                    },
-                    "updated_by": {
-                      "type": "keyword"
-                    },
-                    "uuid": {
-                      "type": "keyword"
-                    },
-                    "version": {
-                      "type": "keyword"
-                    }
-                  }
-                },
-                "severity": {
-                  "type": "keyword"
-                },
-                "severity_improving": {
-                  "type": "boolean"
-                },
-                "start": {
-                  "type": "date"
-                },
-                "status": {
-                  "type": "keyword"
-                },
-                "suppression": {
-                  "properties": {
-                    "docs_count": {
-                      "type": "long"
-                    },
-                    "end": {
-                      "type": "date"
-                    },
-                    "start": {
-                      "type": "date"
-                    },
-                    "terms": {
-                      "properties": {
-                        "field": {
-                          "type": "keyword"
-                        },
-                        "value": {
-                          "type": "keyword"
-                        }
-                      }
-                    }
-                  }
-                },
-                "system_status": {
-                  "type": "keyword"
-                },
-                "time_range": {
-                  "type": "date_range",
-                  "format": "epoch_millis||strict_date_optional_time"
-                },
-                "url": {
-                  "type": "keyword",
-                  "index": false,
-                  "ignore_above": 2048
-                },
-                "uuid": {
-                  "type": "keyword"
-                },
-                "workflow_assignee_ids": {
-                  "type": "keyword"
-                },
-                "workflow_reason": {
-                  "type": "keyword"
-                },
-                "workflow_status": {
-                  "type": "keyword"
-                },
-                "workflow_status_updated_at": {
-                  "type": "date"
-                },
-                "workflow_tags": {
-                  "type": "keyword"
-                },
-                "workflow_user": {
-                  "type": "keyword"
-                }
-              }
-            },
-            "space_ids": {
-              "type": "keyword"
-            },
-            "version": {
-              "type": "version"
-            }
-          }
-        },
-        "slo": {
-          "properties": {
-            "id": {
-              "type": "keyword"
-            },
-            "instanceId": {
-              "type": "keyword"
-            },
-            "revision": {
-              "type": "long"
-            }
-          }
-        },
-        "tags": {
-          "type": "keyword"
-        }
-      }
-    }
-  },
-  ".internal.alerts-ml.anomaly-detection.alerts-default-000001": {
-    "mappings": {
-      "dynamic": "false",
-      "_meta": {
-        "namespace": "default",
-        "kibana": {
-          "version": "8.15.0"
-        },
-        "managed": true
-      },
-      "properties": {
-        "@timestamp": {
-          "type": "date",
-          "ignore_malformed": false
-        },
-        "event": {
-          "properties": {
-            "action": {
-              "type": "keyword"
-            },
-            "kind": {
-              "type": "keyword"
-            }
-          }
-        },
-        "kibana": {
-          "properties": {
-            "alert": {
-              "properties": {
-                "action_group": {
-                  "type": "keyword"
-                },
-                "anomaly_score": {
-                  "type": "double"
-                },
-                "anomaly_timestamp": {
-                  "type": "date"
-                },
-                "case_ids": {
-                  "type": "keyword"
-                },
-                "consecutive_matches": {
-                  "type": "long"
-                },
-                "duration": {
-                  "properties": {
-                    "us": {
-                      "type": "long"
-                    }
-                  }
-                },
-                "end": {
-                  "type": "date"
-                },
-                "flapping": {
-                  "type": "boolean"
-                },
-                "flapping_history": {
-                  "type": "boolean"
-                },
-                "instance": {
-                  "properties": {
-                    "id": {
-                      "type": "keyword"
-                    }
-                  }
-                },
-                "is_interim": {
-                  "type": "boolean"
-                },
-                "job_id": {
-                  "type": "keyword"
-                },
-                "last_detected": {
-                  "type": "date"
-                },
-                "maintenance_window_ids": {
-                  "type": "keyword"
-                },
-                "previous_action_group": {
-                  "type": "keyword"
-                },
-                "reason": {
-                  "type": "keyword",
-                  "fields": {
-                    "text": {
-                      "type": "match_only_text"
-                    }
-                  }
-                },
-                "rule": {
-                  "properties": {
-                    "category": {
-                      "type": "keyword"
-                    },
-                    "consumer": {
-                      "type": "keyword"
-                    },
-                    "execution": {
-                      "properties": {
-                        "timestamp": {
-                          "type": "date"
-                        },
-                        "uuid": {
-                          "type": "keyword"
-                        }
-                      }
-                    },
-                    "name": {
-                      "type": "keyword"
-                    },
-                    "parameters": {
-                      "type": "flattened",
-                      "ignore_above": 4096
-                    },
-                    "producer": {
-                      "type": "keyword"
-                    },
-                    "revision": {
-                      "type": "long"
-                    },
-                    "rule_type_id": {
-                      "type": "keyword"
-                    },
-                    "tags": {
-                      "type": "keyword"
-                    },
-                    "uuid": {
-                      "type": "keyword"
-                    }
-                  }
-                },
-                "severity_improving": {
-                  "type": "boolean"
-                },
-                "start": {
-                  "type": "date"
-                },
-                "status": {
-                  "type": "keyword"
-                },
-                "time_range": {
-                  "type": "date_range",
-                  "format": "epoch_millis||strict_date_optional_time"
-                },
-                "top_influencers": {
-                  "dynamic": "false",
-                  "properties": {
-                    "influencer_field_name": {
-                      "type": "keyword"
-                    },
-                    "influencer_field_value": {
-                      "type": "keyword"
-                    },
-                    "influencer_score": {
-                      "type": "double"
-                    },
-                    "initial_influencer_score": {
-                      "type": "double"
-                    },
-                    "is_interim": {
-                      "type": "boolean"
-                    },
-                    "job_id": {
-                      "type": "keyword"
-                    },
-                    "timestamp": {
-                      "type": "date"
-                    }
-                  }
-                },
-                "top_records": {
-                  "dynamic": "false",
-                  "properties": {
-                    "actual": {
-                      "type": "double"
-                    },
-                    "by_field_name": {
-                      "type": "keyword"
-                    },
-                    "by_field_value": {
-                      "type": "keyword"
-                    },
-                    "detector_index": {
-                      "type": "integer"
-                    },
-                    "field_name": {
-                      "type": "keyword"
-                    },
-                    "function": {
-                      "type": "keyword"
-                    },
-                    "initial_record_score": {
-                      "type": "double"
-                    },
-                    "is_interim": {
-                      "type": "boolean"
-                    },
-                    "job_id": {
-                      "type": "keyword"
-                    },
-                    "over_field_name": {
-                      "type": "keyword"
-                    },
-                    "over_field_value": {
-                      "type": "keyword"
-                    },
-                    "partition_field_name": {
-                      "type": "keyword"
-                    },
-                    "partition_field_value": {
-                      "type": "keyword"
-                    },
-                    "record_score": {
-                      "type": "double"
-                    },
-                    "timestamp": {
-                      "type": "date"
-                    },
-                    "typical": {
-                      "type": "double"
-                    }
-                  }
-                },
-                "url": {
-                  "type": "keyword",
-                  "index": false,
-                  "ignore_above": 2048
-                },
-                "uuid": {
-                  "type": "keyword"
-                },
-                "workflow_assignee_ids": {
-                  "type": "keyword"
-                },
-                "workflow_status": {
-                  "type": "keyword"
-                },
-                "workflow_tags": {
-                  "type": "keyword"
-                }
-              }
-            },
-            "space_ids": {
-              "type": "keyword"
-            },
-            "version": {
-              "type": "version"
-            }
-          }
-        },
-        "tags": {
-          "type": "keyword"
-        }
-      }
-    }
-  },
-  "custom_analyzer": {
-    "mappings": {}
-  },
-  ".internal.alerts-stack.alerts-default-000001": {
+  ".internal.alerts-observability.logs.alerts-default-000001": {
     "mappings": {
       "dynamic": "false",
       "_meta": {
@@ -1536,8 +969,7 @@
         "ecs": {
           "properties": {
             "version": {
-              "type": "keyword",
-              "ignore_above": 1024
+              "type": "keyword"
             }
           }
         },
@@ -2705,6 +2137,9 @@
                 "consecutive_matches": {
                   "type": "long"
                 },
+                "context": {
+                  "type": "object"
+                },
                 "duration": {
                   "properties": {
                     "us": {
@@ -2717,15 +2152,17 @@
                 },
                 "evaluation": {
                   "properties": {
-                    "conditions": {
-                      "type": "keyword"
-                    },
                     "threshold": {
                       "type": "scaled_float",
                       "scaling_factor": 100.0
                     },
                     "value": {
-                      "type": "keyword"
+                      "type": "scaled_float",
+                      "scaling_factor": 100.0
+                    },
+                    "values": {
+                      "type": "scaled_float",
+                      "scaling_factor": 100.0
                     }
                   }
                 },
@@ -2734,6 +2171,16 @@
                 },
                 "flapping_history": {
                   "type": "boolean"
+                },
+                "group": {
+                  "properties": {
+                    "field": {
+                      "type": "keyword"
+                    },
+                    "value": {
+                      "type": "keyword"
+                    }
+                  }
                 },
                 "instance": {
                   "properties": {
@@ -2759,12 +2206,30 @@
                     }
                   }
                 },
+                "risk_score": {
+                  "type": "float"
+                },
                 "rule": {
                   "properties": {
+                    "author": {
+                      "type": "keyword"
+                    },
                     "category": {
                       "type": "keyword"
                     },
                     "consumer": {
+                      "type": "keyword"
+                    },
+                    "created_at": {
+                      "type": "date"
+                    },
+                    "created_by": {
+                      "type": "keyword"
+                    },
+                    "description": {
+                      "type": "keyword"
+                    },
+                    "enabled": {
                       "type": "keyword"
                     },
                     "execution": {
@@ -2777,7 +2242,19 @@
                         }
                       }
                     },
+                    "from": {
+                      "type": "keyword"
+                    },
+                    "interval": {
+                      "type": "keyword"
+                    },
+                    "license": {
+                      "type": "keyword"
+                    },
                     "name": {
+                      "type": "keyword"
+                    },
+                    "note": {
                       "type": "keyword"
                     },
                     "parameters": {
@@ -2787,8 +2264,17 @@
                     "producer": {
                       "type": "keyword"
                     },
+                    "references": {
+                      "type": "keyword"
+                    },
                     "revision": {
                       "type": "long"
+                    },
+                    "rule_id": {
+                      "type": "keyword"
+                    },
+                    "rule_name_override": {
+                      "type": "keyword"
                     },
                     "rule_type_id": {
                       "type": "keyword"
@@ -2796,10 +2282,28 @@
                     "tags": {
                       "type": "keyword"
                     },
+                    "to": {
+                      "type": "keyword"
+                    },
+                    "type": {
+                      "type": "keyword"
+                    },
+                    "updated_at": {
+                      "type": "date"
+                    },
+                    "updated_by": {
+                      "type": "keyword"
+                    },
                     "uuid": {
+                      "type": "keyword"
+                    },
+                    "version": {
                       "type": "keyword"
                     }
                   }
+                },
+                "severity": {
+                  "type": "keyword"
                 },
                 "severity_improving": {
                   "type": "boolean"
@@ -2810,12 +2314,35 @@
                 "status": {
                   "type": "keyword"
                 },
+                "suppression": {
+                  "properties": {
+                    "docs_count": {
+                      "type": "long"
+                    },
+                    "end": {
+                      "type": "date"
+                    },
+                    "start": {
+                      "type": "date"
+                    },
+                    "terms": {
+                      "properties": {
+                        "field": {
+                          "type": "keyword"
+                        },
+                        "value": {
+                          "type": "keyword"
+                        }
+                      }
+                    }
+                  }
+                },
+                "system_status": {
+                  "type": "keyword"
+                },
                 "time_range": {
                   "type": "date_range",
                   "format": "epoch_millis||strict_date_optional_time"
-                },
-                "title": {
-                  "type": "keyword"
                 },
                 "url": {
                   "type": "keyword",
@@ -2828,10 +2355,19 @@
                 "workflow_assignee_ids": {
                   "type": "keyword"
                 },
+                "workflow_reason": {
+                  "type": "keyword"
+                },
                 "workflow_status": {
                   "type": "keyword"
                 },
+                "workflow_status_updated_at": {
+                  "type": "date"
+                },
                 "workflow_tags": {
+                  "type": "keyword"
+                },
+                "workflow_user": {
                   "type": "keyword"
                 }
               }
@@ -8502,7 +8038,7 @@
       }
     }
   },
-  ".internal.alerts-observability.apm.alerts-default-000001": {
+  ".internal.alerts-observability.uptime.alerts-default-000001": {
     "mappings": {
       "dynamic": "false",
       "_meta": {
@@ -8524,12 +8060,22 @@
             }
           }
         },
-        "container": {
+        "anomaly": {
           "properties": {
-            "id": {
-              "type": "keyword"
+            "bucket_span": {
+              "properties": {
+                "minutes": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "start": {
+              "type": "date"
             }
           }
+        },
+        "configId": {
+          "type": "keyword"
         },
         "ecs": {
           "properties": {
@@ -8540,11 +8086,8 @@
         },
         "error": {
           "properties": {
-            "grouping_key": {
-              "type": "keyword"
-            },
-            "grouping_name": {
-              "type": "keyword"
+            "message": {
+              "type": "text"
             }
           }
         },
@@ -8821,43 +8364,88 @@
             }
           }
         },
-        "labels": {
-          "type": "object",
-          "dynamic": "true"
-        },
-        "processor": {
+        "location": {
           "properties": {
-            "event": {
+            "id": {
+              "type": "keyword"
+            },
+            "name": {
               "type": "keyword"
             }
           }
         },
-        "service": {
+        "monitor": {
           "properties": {
-            "environment": {
+            "id": {
               "type": "keyword"
             },
-            "language": {
+            "name": {
+              "type": "keyword"
+            },
+            "tags": {
+              "type": "keyword"
+            },
+            "type": {
+              "type": "keyword"
+            }
+          }
+        },
+        "observer": {
+          "properties": {
+            "geo": {
               "properties": {
                 "name": {
                   "type": "keyword"
                 }
               }
-            },
-            "name": {
-              "type": "keyword"
             }
           }
         },
         "tags": {
           "type": "keyword"
         },
-        "transaction": {
+        "tls": {
           "properties": {
-            "name": {
-              "type": "keyword"
-            },
-            "type": {
+            "server": {
+              "properties": {
+                "hash": {
+                  "properties": {
+                    "sha256": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "x509": {
+                  "properties": {
+                    "issuer": {
+                      "properties": {
+                        "common_name": {
+                          "type": "keyword"
+                        }
+                      }
+                    },
+                    "not_after": {
+                      "type": "date"
+                    },
+                    "not_before": {
+                      "type": "date"
+                    },
+                    "subject": {
+                      "properties": {
+                        "common_name": {
+                          "type": "keyword"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "url": {
+          "properties": {
+            "full": {
               "type": "keyword"
             }
           }
@@ -8865,121 +8453,370 @@
       }
     }
   },
-  ".kibana-observability-ai-assistant-conversations-000001": {
+  "custom_analyzer": {
+    "mappings": {}
+  },
+  "eval": {
+    "mappings": {
+      "properties": {
+        "Age": {
+          "type": "integer"
+        },
+        "Class Name": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Clothing ID": {
+          "type": "integer"
+        },
+        "Department Name": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Division Name": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Positive Feedback Count": {
+          "type": "integer"
+        },
+        "Rating": {
+          "type": "integer"
+        },
+        "Recommended IND": {
+          "type": "boolean"
+        },
+        "Review Text": {
+          "type": "text",
+          "analyzer": "english",
+          "fielddata": true
+        },
+        "Title": {
+          "type": "text",
+          "analyzer": "english",
+          "fielddata": true
+        }
+      }
+    }
+  },
+  ".internal.alerts-observability.slo.alerts-default-000001": {
     "mappings": {
       "dynamic": "false",
       "_meta": {
-        "model": ".elser_model_2"
+        "namespace": "default",
+        "kibana": {
+          "version": "8.15.0"
+        },
+        "managed": true
       },
-      "dynamic_templates": [
-        {
-          "numeric_labels": {
-            "path_match": "numeric_labels.*",
-            "mapping": {
-              "scaling_factor": 1000000,
-              "type": "scaled_float"
-            }
-          }
-        }
-      ],
       "properties": {
         "@timestamp": {
-          "type": "date"
+          "type": "date",
+          "ignore_malformed": false
         },
-        "conversation": {
+        "ecs": {
           "properties": {
-            "id": {
-              "type": "keyword",
-              "ignore_above": 1024
-            },
-            "last_updated": {
-              "type": "date"
-            },
-            "title": {
-              "type": "text"
-            },
-            "token_count": {
-              "properties": {
-                "completion": {
-                  "type": "integer"
-                },
-                "prompt": {
-                  "type": "integer"
-                },
-                "total": {
-                  "type": "integer"
-                }
-              }
+            "version": {
+              "type": "keyword"
             }
           }
         },
-        "labels": {
-          "type": "object",
-          "dynamic": "true"
-        },
-        "messages": {
+        "event": {
           "properties": {
-            "@timestamp": {
-              "type": "date"
+            "action": {
+              "type": "keyword"
             },
-            "message": {
+            "kind": {
+              "type": "keyword"
+            }
+          }
+        },
+        "kibana": {
+          "properties": {
+            "alert": {
               "properties": {
-                "content": {
-                  "type": "text"
+                "action_group": {
+                  "type": "keyword"
                 },
-                "data": {
-                  "type": "object",
-                  "enabled": false
+                "case_ids": {
+                  "type": "keyword"
                 },
-                "event": {
-                  "type": "text"
+                "consecutive_matches": {
+                  "type": "long"
                 },
-                "function_call": {
+                "context": {
+                  "type": "object"
+                },
+                "duration": {
                   "properties": {
-                    "arguments": {
-                      "type": "object",
-                      "enabled": false
-                    },
-                    "name": {
-                      "type": "keyword",
-                      "ignore_above": 1024
-                    },
-                    "trigger": {
-                      "type": "keyword",
-                      "ignore_above": 1024
+                    "us": {
+                      "type": "long"
                     }
                   }
                 },
-                "role": {
+                "end": {
+                  "type": "date"
+                },
+                "evaluation": {
+                  "properties": {
+                    "threshold": {
+                      "type": "scaled_float",
+                      "scaling_factor": 100.0
+                    },
+                    "value": {
+                      "type": "scaled_float",
+                      "scaling_factor": 100.0
+                    },
+                    "values": {
+                      "type": "scaled_float",
+                      "scaling_factor": 100.0
+                    }
+                  }
+                },
+                "flapping": {
+                  "type": "boolean"
+                },
+                "flapping_history": {
+                  "type": "boolean"
+                },
+                "group": {
+                  "properties": {
+                    "field": {
+                      "type": "keyword"
+                    },
+                    "value": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "instance": {
+                  "properties": {
+                    "id": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "last_detected": {
+                  "type": "date"
+                },
+                "maintenance_window_ids": {
+                  "type": "keyword"
+                },
+                "previous_action_group": {
+                  "type": "keyword"
+                },
+                "reason": {
                   "type": "keyword",
-                  "ignore_above": 1024
+                  "fields": {
+                    "text": {
+                      "type": "match_only_text"
+                    }
+                  }
+                },
+                "risk_score": {
+                  "type": "float"
+                },
+                "rule": {
+                  "properties": {
+                    "author": {
+                      "type": "keyword"
+                    },
+                    "category": {
+                      "type": "keyword"
+                    },
+                    "consumer": {
+                      "type": "keyword"
+                    },
+                    "created_at": {
+                      "type": "date"
+                    },
+                    "created_by": {
+                      "type": "keyword"
+                    },
+                    "description": {
+                      "type": "keyword"
+                    },
+                    "enabled": {
+                      "type": "keyword"
+                    },
+                    "execution": {
+                      "properties": {
+                        "timestamp": {
+                          "type": "date"
+                        },
+                        "uuid": {
+                          "type": "keyword"
+                        }
+                      }
+                    },
+                    "from": {
+                      "type": "keyword"
+                    },
+                    "interval": {
+                      "type": "keyword"
+                    },
+                    "license": {
+                      "type": "keyword"
+                    },
+                    "name": {
+                      "type": "keyword"
+                    },
+                    "note": {
+                      "type": "keyword"
+                    },
+                    "parameters": {
+                      "type": "flattened",
+                      "ignore_above": 4096
+                    },
+                    "producer": {
+                      "type": "keyword"
+                    },
+                    "references": {
+                      "type": "keyword"
+                    },
+                    "revision": {
+                      "type": "long"
+                    },
+                    "rule_id": {
+                      "type": "keyword"
+                    },
+                    "rule_name_override": {
+                      "type": "keyword"
+                    },
+                    "rule_type_id": {
+                      "type": "keyword"
+                    },
+                    "tags": {
+                      "type": "keyword"
+                    },
+                    "to": {
+                      "type": "keyword"
+                    },
+                    "type": {
+                      "type": "keyword"
+                    },
+                    "updated_at": {
+                      "type": "date"
+                    },
+                    "updated_by": {
+                      "type": "keyword"
+                    },
+                    "uuid": {
+                      "type": "keyword"
+                    },
+                    "version": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "severity": {
+                  "type": "keyword"
+                },
+                "severity_improving": {
+                  "type": "boolean"
+                },
+                "start": {
+                  "type": "date"
+                },
+                "status": {
+                  "type": "keyword"
+                },
+                "suppression": {
+                  "properties": {
+                    "docs_count": {
+                      "type": "long"
+                    },
+                    "end": {
+                      "type": "date"
+                    },
+                    "start": {
+                      "type": "date"
+                    },
+                    "terms": {
+                      "properties": {
+                        "field": {
+                          "type": "keyword"
+                        },
+                        "value": {
+                          "type": "keyword"
+                        }
+                      }
+                    }
+                  }
+                },
+                "system_status": {
+                  "type": "keyword"
+                },
+                "time_range": {
+                  "type": "date_range",
+                  "format": "epoch_millis||strict_date_optional_time"
+                },
+                "url": {
+                  "type": "keyword",
+                  "index": false,
+                  "ignore_above": 2048
+                },
+                "uuid": {
+                  "type": "keyword"
+                },
+                "workflow_assignee_ids": {
+                  "type": "keyword"
+                },
+                "workflow_reason": {
+                  "type": "keyword"
+                },
+                "workflow_status": {
+                  "type": "keyword"
+                },
+                "workflow_status_updated_at": {
+                  "type": "date"
+                },
+                "workflow_tags": {
+                  "type": "keyword"
+                },
+                "workflow_user": {
+                  "type": "keyword"
                 }
               }
+            },
+            "space_ids": {
+              "type": "keyword"
+            },
+            "version": {
+              "type": "version"
             }
           }
         },
-        "namespace": {
-          "type": "keyword",
-          "ignore_above": 1024
-        },
-        "numeric_labels": {
-          "type": "object",
-          "dynamic": "true"
-        },
-        "public": {
-          "type": "boolean"
-        },
-        "user": {
+        "slo": {
           "properties": {
             "id": {
-              "type": "keyword",
-              "ignore_above": 1024
+              "type": "keyword"
             },
-            "name": {
-              "type": "keyword",
-              "ignore_above": 1024
+            "instanceId": {
+              "type": "keyword"
+            },
+            "revision": {
+              "type": "long"
             }
           }
+        },
+        "tags": {
+          "type": "keyword"
         }
       }
     }
@@ -16932,304 +16769,193 @@
       }
     }
   },
-  "eval": {
+  ".kibana-observability-ai-assistant-kb-000001": {
     "mappings": {
+      "dynamic": "false",
       "properties": {
-        "Age": {
-          "type": "integer"
+        "@timestamp": {
+          "type": "date"
         },
-        "Class Name": {
-          "type": "text",
-          "fields": {
-            "keyword": {
+        "confidence": {
+          "type": "keyword",
+          "ignore_above": 1024
+        },
+        "conversation": {
+          "properties": {
+            "id": {
               "type": "keyword",
-              "ignore_above": 256
+              "ignore_above": 1024
+            },
+            "last_updated": {
+              "type": "date"
+            },
+            "title": {
+              "type": "text"
             }
           }
         },
-        "Clothing ID": {
-          "type": "integer"
-        },
-        "Department Name": {
+        "doc_id": {
           "type": "text",
-          "fields": {
-            "keyword": {
-              "type": "keyword",
-              "ignore_above": 256
-            }
-          }
+          "fielddata": true
         },
-        "Division Name": {
-          "type": "text",
-          "fields": {
-            "keyword": {
-              "type": "keyword",
-              "ignore_above": 256
-            }
-          }
+        "id": {
+          "type": "keyword",
+          "ignore_above": 1024
         },
-        "Positive Feedback Count": {
-          "type": "integer"
-        },
-        "Rating": {
-          "type": "integer"
-        },
-        "Recommended IND": {
+        "is_correction": {
           "type": "boolean"
         },
-        "Review Text": {
+        "labels": {
+          "type": "object",
+          "dynamic": "true"
+        },
+        "ml": {
+          "properties": {
+            "tokens": {
+              "type": "rank_features"
+            }
+          }
+        },
+        "namespace": {
+          "type": "keyword",
+          "ignore_above": 1024
+        },
+        "public": {
+          "type": "boolean"
+        },
+        "text": {
           "type": "text"
         },
-        "Title": {
-          "type": "text"
+        "user": {
+          "properties": {
+            "id": {
+              "type": "keyword",
+              "ignore_above": 1024
+            },
+            "name": {
+              "type": "keyword",
+              "ignore_above": 1024
+            }
+          }
         }
       }
     }
   },
-  ".internal.alerts-transform.health.alerts-default-000001": {
+  ".kibana-observability-ai-assistant-conversations-000001": {
     "mappings": {
       "dynamic": "false",
       "_meta": {
-        "namespace": "default",
-        "kibana": {
-          "version": "8.15.0"
-        },
-        "managed": true
+        "model": ".elser_model_2"
       },
+      "dynamic_templates": [
+        {
+          "numeric_labels": {
+            "path_match": "numeric_labels.*",
+            "mapping": {
+              "scaling_factor": 1000000,
+              "type": "scaled_float"
+            }
+          }
+        }
+      ],
       "properties": {
         "@timestamp": {
-          "type": "date",
-          "ignore_malformed": false
+          "type": "date"
         },
-        "event": {
+        "conversation": {
           "properties": {
-            "action": {
-              "type": "keyword"
+            "id": {
+              "type": "keyword",
+              "ignore_above": 1024
             },
-            "kind": {
-              "type": "keyword"
-            }
-          }
-        },
-        "kibana": {
-          "properties": {
-            "alert": {
+            "last_updated": {
+              "type": "date"
+            },
+            "title": {
+              "type": "text"
+            },
+            "token_count": {
               "properties": {
-                "action_group": {
-                  "type": "keyword"
+                "completion": {
+                  "type": "integer"
                 },
-                "case_ids": {
-                  "type": "keyword"
+                "prompt": {
+                  "type": "integer"
                 },
-                "consecutive_matches": {
-                  "type": "long"
-                },
-                "duration": {
-                  "properties": {
-                    "us": {
-                      "type": "long"
-                    }
-                  }
-                },
-                "end": {
-                  "type": "date"
-                },
-                "flapping": {
-                  "type": "boolean"
-                },
-                "flapping_history": {
-                  "type": "boolean"
-                },
-                "instance": {
-                  "properties": {
-                    "id": {
-                      "type": "keyword"
-                    }
-                  }
-                },
-                "last_detected": {
-                  "type": "date"
-                },
-                "maintenance_window_ids": {
-                  "type": "keyword"
-                },
-                "previous_action_group": {
-                  "type": "keyword"
-                },
-                "reason": {
-                  "type": "keyword",
-                  "fields": {
-                    "text": {
-                      "type": "match_only_text"
-                    }
-                  }
-                },
-                "results": {
-                  "dynamic": "false",
-                  "properties": {
-                    "description": {
-                      "type": "text"
-                    },
-                    "health_status": {
-                      "type": "keyword"
-                    },
-                    "issues": {
-                      "type": "object"
-                    },
-                    "node_name": {
-                      "type": "keyword"
-                    },
-                    "transform_id": {
-                      "type": "keyword"
-                    },
-                    "transform_state": {
-                      "type": "keyword"
-                    }
-                  }
-                },
-                "rule": {
-                  "properties": {
-                    "category": {
-                      "type": "keyword"
-                    },
-                    "consumer": {
-                      "type": "keyword"
-                    },
-                    "execution": {
-                      "properties": {
-                        "timestamp": {
-                          "type": "date"
-                        },
-                        "uuid": {
-                          "type": "keyword"
-                        }
-                      }
-                    },
-                    "name": {
-                      "type": "keyword"
-                    },
-                    "parameters": {
-                      "type": "flattened",
-                      "ignore_above": 4096
-                    },
-                    "producer": {
-                      "type": "keyword"
-                    },
-                    "revision": {
-                      "type": "long"
-                    },
-                    "rule_type_id": {
-                      "type": "keyword"
-                    },
-                    "tags": {
-                      "type": "keyword"
-                    },
-                    "uuid": {
-                      "type": "keyword"
-                    }
-                  }
-                },
-                "severity_improving": {
-                  "type": "boolean"
-                },
-                "start": {
-                  "type": "date"
-                },
-                "status": {
-                  "type": "keyword"
-                },
-                "time_range": {
-                  "type": "date_range",
-                  "format": "epoch_millis||strict_date_optional_time"
-                },
-                "url": {
-                  "type": "keyword",
-                  "index": false,
-                  "ignore_above": 2048
-                },
-                "uuid": {
-                  "type": "keyword"
-                },
-                "workflow_assignee_ids": {
-                  "type": "keyword"
-                },
-                "workflow_status": {
-                  "type": "keyword"
-                },
-                "workflow_tags": {
-                  "type": "keyword"
+                "total": {
+                  "type": "integer"
                 }
               }
+            }
+          }
+        },
+        "labels": {
+          "type": "object",
+          "dynamic": "true"
+        },
+        "messages": {
+          "properties": {
+            "@timestamp": {
+              "type": "date"
             },
-            "space_ids": {
-              "type": "keyword"
+            "message": {
+              "properties": {
+                "content": {
+                  "type": "text"
+                },
+                "data": {
+                  "type": "object",
+                  "enabled": false
+                },
+                "event": {
+                  "type": "text"
+                },
+                "function_call": {
+                  "properties": {
+                    "arguments": {
+                      "type": "object",
+                      "enabled": false
+                    },
+                    "name": {
+                      "type": "keyword",
+                      "ignore_above": 1024
+                    },
+                    "trigger": {
+                      "type": "keyword",
+                      "ignore_above": 1024
+                    }
+                  }
+                },
+                "role": {
+                  "type": "keyword",
+                  "ignore_above": 1024
+                }
+              }
+            }
+          }
+        },
+        "namespace": {
+          "type": "keyword",
+          "ignore_above": 1024
+        },
+        "numeric_labels": {
+          "type": "object",
+          "dynamic": "true"
+        },
+        "public": {
+          "type": "boolean"
+        },
+        "user": {
+          "properties": {
+            "id": {
+              "type": "keyword",
+              "ignore_above": 1024
             },
-            "version": {
-              "type": "version"
+            "name": {
+              "type": "keyword",
+              "ignore_above": 1024
             }
           }
-        },
-        "tags": {
-          "type": "keyword"
-        }
-      }
-    }
-  },
-  "cars_new": {
-    "mappings": {
-      "properties": {
-        "color": {
-          "type": "text",
-          "fields": {
-            "keyword": {
-              "type": "keyword"
-            }
-          }
-        },
-        "fuel_type": {
-          "type": "text",
-          "fields": {
-            "keyword": {
-              "type": "keyword"
-            }
-          }
-        },
-        "make": {
-          "type": "text",
-          "fields": {
-            "keyword": {
-              "type": "keyword"
-            }
-          }
-        },
-        "mileage(kilometers)": {
-          "type": "float"
-        },
-        "priceUSD": {
-          "type": "float"
-        },
-        "segment": {
-          "type": "text",
-          "fields": {
-            "keyword": {
-              "type": "keyword"
-            }
-          }
-        },
-        "transmission": {
-          "type": "text",
-          "fields": {
-            "keyword": {
-              "type": "keyword"
-            }
-          }
-        },
-        "volume(cm3)": {
-          "type": "float"
-        },
-        "year": {
-          "type": "date",
-          "format": "yyyy"
         }
       }
     }
@@ -17471,7 +17197,627 @@
       }
     }
   },
-  ".internal.alerts-observability.metrics.alerts-default-000001": {
+  ".internal.alerts-ml.anomaly-detection.alerts-default-000001": {
+    "mappings": {
+      "dynamic": "false",
+      "_meta": {
+        "namespace": "default",
+        "kibana": {
+          "version": "8.15.0"
+        },
+        "managed": true
+      },
+      "properties": {
+        "@timestamp": {
+          "type": "date",
+          "ignore_malformed": false
+        },
+        "event": {
+          "properties": {
+            "action": {
+              "type": "keyword"
+            },
+            "kind": {
+              "type": "keyword"
+            }
+          }
+        },
+        "kibana": {
+          "properties": {
+            "alert": {
+              "properties": {
+                "action_group": {
+                  "type": "keyword"
+                },
+                "anomaly_score": {
+                  "type": "double"
+                },
+                "anomaly_timestamp": {
+                  "type": "date"
+                },
+                "case_ids": {
+                  "type": "keyword"
+                },
+                "consecutive_matches": {
+                  "type": "long"
+                },
+                "duration": {
+                  "properties": {
+                    "us": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "end": {
+                  "type": "date"
+                },
+                "flapping": {
+                  "type": "boolean"
+                },
+                "flapping_history": {
+                  "type": "boolean"
+                },
+                "instance": {
+                  "properties": {
+                    "id": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "is_interim": {
+                  "type": "boolean"
+                },
+                "job_id": {
+                  "type": "keyword"
+                },
+                "last_detected": {
+                  "type": "date"
+                },
+                "maintenance_window_ids": {
+                  "type": "keyword"
+                },
+                "previous_action_group": {
+                  "type": "keyword"
+                },
+                "reason": {
+                  "type": "keyword",
+                  "fields": {
+                    "text": {
+                      "type": "match_only_text"
+                    }
+                  }
+                },
+                "rule": {
+                  "properties": {
+                    "category": {
+                      "type": "keyword"
+                    },
+                    "consumer": {
+                      "type": "keyword"
+                    },
+                    "execution": {
+                      "properties": {
+                        "timestamp": {
+                          "type": "date"
+                        },
+                        "uuid": {
+                          "type": "keyword"
+                        }
+                      }
+                    },
+                    "name": {
+                      "type": "keyword"
+                    },
+                    "parameters": {
+                      "type": "flattened",
+                      "ignore_above": 4096
+                    },
+                    "producer": {
+                      "type": "keyword"
+                    },
+                    "revision": {
+                      "type": "long"
+                    },
+                    "rule_type_id": {
+                      "type": "keyword"
+                    },
+                    "tags": {
+                      "type": "keyword"
+                    },
+                    "uuid": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "severity_improving": {
+                  "type": "boolean"
+                },
+                "start": {
+                  "type": "date"
+                },
+                "status": {
+                  "type": "keyword"
+                },
+                "time_range": {
+                  "type": "date_range",
+                  "format": "epoch_millis||strict_date_optional_time"
+                },
+                "top_influencers": {
+                  "dynamic": "false",
+                  "properties": {
+                    "influencer_field_name": {
+                      "type": "keyword"
+                    },
+                    "influencer_field_value": {
+                      "type": "keyword"
+                    },
+                    "influencer_score": {
+                      "type": "double"
+                    },
+                    "initial_influencer_score": {
+                      "type": "double"
+                    },
+                    "is_interim": {
+                      "type": "boolean"
+                    },
+                    "job_id": {
+                      "type": "keyword"
+                    },
+                    "timestamp": {
+                      "type": "date"
+                    }
+                  }
+                },
+                "top_records": {
+                  "dynamic": "false",
+                  "properties": {
+                    "actual": {
+                      "type": "double"
+                    },
+                    "by_field_name": {
+                      "type": "keyword"
+                    },
+                    "by_field_value": {
+                      "type": "keyword"
+                    },
+                    "detector_index": {
+                      "type": "integer"
+                    },
+                    "field_name": {
+                      "type": "keyword"
+                    },
+                    "function": {
+                      "type": "keyword"
+                    },
+                    "initial_record_score": {
+                      "type": "double"
+                    },
+                    "is_interim": {
+                      "type": "boolean"
+                    },
+                    "job_id": {
+                      "type": "keyword"
+                    },
+                    "over_field_name": {
+                      "type": "keyword"
+                    },
+                    "over_field_value": {
+                      "type": "keyword"
+                    },
+                    "partition_field_name": {
+                      "type": "keyword"
+                    },
+                    "partition_field_value": {
+                      "type": "keyword"
+                    },
+                    "record_score": {
+                      "type": "double"
+                    },
+                    "timestamp": {
+                      "type": "date"
+                    },
+                    "typical": {
+                      "type": "double"
+                    }
+                  }
+                },
+                "url": {
+                  "type": "keyword",
+                  "index": false,
+                  "ignore_above": 2048
+                },
+                "uuid": {
+                  "type": "keyword"
+                },
+                "workflow_assignee_ids": {
+                  "type": "keyword"
+                },
+                "workflow_status": {
+                  "type": "keyword"
+                },
+                "workflow_tags": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "space_ids": {
+              "type": "keyword"
+            },
+            "version": {
+              "type": "version"
+            }
+          }
+        },
+        "tags": {
+          "type": "keyword"
+        }
+      }
+    }
+  },
+  ".internal.alerts-observability.apm.alerts-default-000001": {
+    "mappings": {
+      "dynamic": "false",
+      "_meta": {
+        "namespace": "default",
+        "kibana": {
+          "version": "8.15.0"
+        },
+        "managed": true
+      },
+      "properties": {
+        "@timestamp": {
+          "type": "date",
+          "ignore_malformed": false
+        },
+        "agent": {
+          "properties": {
+            "name": {
+              "type": "keyword"
+            }
+          }
+        },
+        "container": {
+          "properties": {
+            "id": {
+              "type": "keyword"
+            }
+          }
+        },
+        "ecs": {
+          "properties": {
+            "version": {
+              "type": "keyword"
+            }
+          }
+        },
+        "error": {
+          "properties": {
+            "grouping_key": {
+              "type": "keyword"
+            },
+            "grouping_name": {
+              "type": "keyword"
+            }
+          }
+        },
+        "event": {
+          "properties": {
+            "action": {
+              "type": "keyword"
+            },
+            "kind": {
+              "type": "keyword"
+            }
+          }
+        },
+        "host": {
+          "properties": {
+            "name": {
+              "type": "keyword"
+            }
+          }
+        },
+        "kibana": {
+          "properties": {
+            "alert": {
+              "properties": {
+                "action_group": {
+                  "type": "keyword"
+                },
+                "case_ids": {
+                  "type": "keyword"
+                },
+                "consecutive_matches": {
+                  "type": "long"
+                },
+                "context": {
+                  "type": "object"
+                },
+                "duration": {
+                  "properties": {
+                    "us": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "end": {
+                  "type": "date"
+                },
+                "evaluation": {
+                  "properties": {
+                    "threshold": {
+                      "type": "scaled_float",
+                      "scaling_factor": 100.0
+                    },
+                    "value": {
+                      "type": "scaled_float",
+                      "scaling_factor": 100.0
+                    },
+                    "values": {
+                      "type": "scaled_float",
+                      "scaling_factor": 100.0
+                    }
+                  }
+                },
+                "flapping": {
+                  "type": "boolean"
+                },
+                "flapping_history": {
+                  "type": "boolean"
+                },
+                "group": {
+                  "properties": {
+                    "field": {
+                      "type": "keyword"
+                    },
+                    "value": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "instance": {
+                  "properties": {
+                    "id": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "last_detected": {
+                  "type": "date"
+                },
+                "maintenance_window_ids": {
+                  "type": "keyword"
+                },
+                "previous_action_group": {
+                  "type": "keyword"
+                },
+                "reason": {
+                  "type": "keyword",
+                  "fields": {
+                    "text": {
+                      "type": "match_only_text"
+                    }
+                  }
+                },
+                "risk_score": {
+                  "type": "float"
+                },
+                "rule": {
+                  "properties": {
+                    "author": {
+                      "type": "keyword"
+                    },
+                    "category": {
+                      "type": "keyword"
+                    },
+                    "consumer": {
+                      "type": "keyword"
+                    },
+                    "created_at": {
+                      "type": "date"
+                    },
+                    "created_by": {
+                      "type": "keyword"
+                    },
+                    "description": {
+                      "type": "keyword"
+                    },
+                    "enabled": {
+                      "type": "keyword"
+                    },
+                    "execution": {
+                      "properties": {
+                        "timestamp": {
+                          "type": "date"
+                        },
+                        "uuid": {
+                          "type": "keyword"
+                        }
+                      }
+                    },
+                    "from": {
+                      "type": "keyword"
+                    },
+                    "interval": {
+                      "type": "keyword"
+                    },
+                    "license": {
+                      "type": "keyword"
+                    },
+                    "name": {
+                      "type": "keyword"
+                    },
+                    "note": {
+                      "type": "keyword"
+                    },
+                    "parameters": {
+                      "type": "flattened",
+                      "ignore_above": 4096
+                    },
+                    "producer": {
+                      "type": "keyword"
+                    },
+                    "references": {
+                      "type": "keyword"
+                    },
+                    "revision": {
+                      "type": "long"
+                    },
+                    "rule_id": {
+                      "type": "keyword"
+                    },
+                    "rule_name_override": {
+                      "type": "keyword"
+                    },
+                    "rule_type_id": {
+                      "type": "keyword"
+                    },
+                    "tags": {
+                      "type": "keyword"
+                    },
+                    "to": {
+                      "type": "keyword"
+                    },
+                    "type": {
+                      "type": "keyword"
+                    },
+                    "updated_at": {
+                      "type": "date"
+                    },
+                    "updated_by": {
+                      "type": "keyword"
+                    },
+                    "uuid": {
+                      "type": "keyword"
+                    },
+                    "version": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "severity": {
+                  "type": "keyword"
+                },
+                "severity_improving": {
+                  "type": "boolean"
+                },
+                "start": {
+                  "type": "date"
+                },
+                "status": {
+                  "type": "keyword"
+                },
+                "suppression": {
+                  "properties": {
+                    "docs_count": {
+                      "type": "long"
+                    },
+                    "end": {
+                      "type": "date"
+                    },
+                    "start": {
+                      "type": "date"
+                    },
+                    "terms": {
+                      "properties": {
+                        "field": {
+                          "type": "keyword"
+                        },
+                        "value": {
+                          "type": "keyword"
+                        }
+                      }
+                    }
+                  }
+                },
+                "system_status": {
+                  "type": "keyword"
+                },
+                "time_range": {
+                  "type": "date_range",
+                  "format": "epoch_millis||strict_date_optional_time"
+                },
+                "url": {
+                  "type": "keyword",
+                  "index": false,
+                  "ignore_above": 2048
+                },
+                "uuid": {
+                  "type": "keyword"
+                },
+                "workflow_assignee_ids": {
+                  "type": "keyword"
+                },
+                "workflow_reason": {
+                  "type": "keyword"
+                },
+                "workflow_status": {
+                  "type": "keyword"
+                },
+                "workflow_status_updated_at": {
+                  "type": "date"
+                },
+                "workflow_tags": {
+                  "type": "keyword"
+                },
+                "workflow_user": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "space_ids": {
+              "type": "keyword"
+            },
+            "version": {
+              "type": "version"
+            }
+          }
+        },
+        "labels": {
+          "type": "object",
+          "dynamic": "true"
+        },
+        "processor": {
+          "properties": {
+            "event": {
+              "type": "keyword"
+            }
+          }
+        },
+        "service": {
+          "properties": {
+            "environment": {
+              "type": "keyword"
+            },
+            "language": {
+              "properties": {
+                "name": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "name": {
+              "type": "keyword"
+            }
+          }
+        },
+        "tags": {
+          "type": "keyword"
+        },
+        "transaction": {
+          "properties": {
+            "name": {
+              "type": "keyword"
+            },
+            "type": {
+              "type": "keyword"
+            }
+          }
+        }
+      }
+    }
+  },
+  ".internal.alerts-stack.alerts-default-000001": {
     "mappings": {
       "dynamic": "false",
       "_meta": {
@@ -18441,7 +18787,8 @@
         "ecs": {
           "properties": {
             "version": {
-              "type": "keyword"
+              "type": "keyword",
+              "ignore_above": 1024
             }
           }
         },
@@ -19609,9 +19956,6 @@
                 "consecutive_matches": {
                   "type": "long"
                 },
-                "context": {
-                  "type": "object"
-                },
                 "duration": {
                   "properties": {
                     "us": {
@@ -19624,17 +19968,15 @@
                 },
                 "evaluation": {
                   "properties": {
+                    "conditions": {
+                      "type": "keyword"
+                    },
                     "threshold": {
                       "type": "scaled_float",
                       "scaling_factor": 100.0
                     },
                     "value": {
-                      "type": "scaled_float",
-                      "scaling_factor": 100.0
-                    },
-                    "values": {
-                      "type": "scaled_float",
-                      "scaling_factor": 100.0
+                      "type": "keyword"
                     }
                   }
                 },
@@ -19643,16 +19985,6 @@
                 },
                 "flapping_history": {
                   "type": "boolean"
-                },
-                "group": {
-                  "properties": {
-                    "field": {
-                      "type": "keyword"
-                    },
-                    "value": {
-                      "type": "keyword"
-                    }
-                  }
                 },
                 "instance": {
                   "properties": {
@@ -19678,30 +20010,12 @@
                     }
                   }
                 },
-                "risk_score": {
-                  "type": "float"
-                },
                 "rule": {
                   "properties": {
-                    "author": {
-                      "type": "keyword"
-                    },
                     "category": {
                       "type": "keyword"
                     },
                     "consumer": {
-                      "type": "keyword"
-                    },
-                    "created_at": {
-                      "type": "date"
-                    },
-                    "created_by": {
-                      "type": "keyword"
-                    },
-                    "description": {
-                      "type": "keyword"
-                    },
-                    "enabled": {
                       "type": "keyword"
                     },
                     "execution": {
@@ -19714,19 +20028,7 @@
                         }
                       }
                     },
-                    "from": {
-                      "type": "keyword"
-                    },
-                    "interval": {
-                      "type": "keyword"
-                    },
-                    "license": {
-                      "type": "keyword"
-                    },
                     "name": {
-                      "type": "keyword"
-                    },
-                    "note": {
                       "type": "keyword"
                     },
                     "parameters": {
@@ -19736,17 +20038,8 @@
                     "producer": {
                       "type": "keyword"
                     },
-                    "references": {
-                      "type": "keyword"
-                    },
                     "revision": {
                       "type": "long"
-                    },
-                    "rule_id": {
-                      "type": "keyword"
-                    },
-                    "rule_name_override": {
-                      "type": "keyword"
                     },
                     "rule_type_id": {
                       "type": "keyword"
@@ -19754,28 +20047,10 @@
                     "tags": {
                       "type": "keyword"
                     },
-                    "to": {
-                      "type": "keyword"
-                    },
-                    "type": {
-                      "type": "keyword"
-                    },
-                    "updated_at": {
-                      "type": "date"
-                    },
-                    "updated_by": {
-                      "type": "keyword"
-                    },
                     "uuid": {
-                      "type": "keyword"
-                    },
-                    "version": {
                       "type": "keyword"
                     }
                   }
-                },
-                "severity": {
-                  "type": "keyword"
                 },
                 "severity_improving": {
                   "type": "boolean"
@@ -19786,35 +20061,12 @@
                 "status": {
                   "type": "keyword"
                 },
-                "suppression": {
-                  "properties": {
-                    "docs_count": {
-                      "type": "long"
-                    },
-                    "end": {
-                      "type": "date"
-                    },
-                    "start": {
-                      "type": "date"
-                    },
-                    "terms": {
-                      "properties": {
-                        "field": {
-                          "type": "keyword"
-                        },
-                        "value": {
-                          "type": "keyword"
-                        }
-                      }
-                    }
-                  }
-                },
-                "system_status": {
-                  "type": "keyword"
-                },
                 "time_range": {
                   "type": "date_range",
                   "format": "epoch_millis||strict_date_optional_time"
+                },
+                "title": {
+                  "type": "keyword"
                 },
                 "url": {
                   "type": "keyword",
@@ -19827,19 +20079,10 @@
                 "workflow_assignee_ids": {
                   "type": "keyword"
                 },
-                "workflow_reason": {
-                  "type": "keyword"
-                },
                 "workflow_status": {
                   "type": "keyword"
                 },
-                "workflow_status_updated_at": {
-                  "type": "date"
-                },
                 "workflow_tags": {
-                  "type": "keyword"
-                },
-                "workflow_user": {
                   "type": "keyword"
                 }
               }
@@ -34123,79 +34366,37 @@
       }
     }
   },
-  ".kibana-observability-ai-assistant-kb-000001": {
+  "reviews_new": {
     "mappings": {
-      "dynamic": "false",
       "properties": {
-        "@timestamp": {
-          "type": "date"
-        },
-        "confidence": {
-          "type": "keyword",
-          "ignore_above": 1024
-        },
-        "conversation": {
-          "properties": {
-            "id": {
-              "type": "keyword",
-              "ignore_above": 1024
-            },
-            "last_updated": {
-              "type": "date"
-            },
-            "title": {
-              "type": "text"
-            }
-          }
-        },
-        "doc_id": {
+        "CompleteReview": {
           "type": "text",
-          "fielddata": true
-        },
-        "id": {
-          "type": "keyword",
-          "ignore_above": 1024
-        },
-        "is_correction": {
-          "type": "boolean"
-        },
-        "labels": {
-          "type": "object",
-          "dynamic": "true"
-        },
-        "ml": {
-          "properties": {
-            "tokens": {
-              "type": "rank_features"
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
             }
           }
         },
-        "namespace": {
-          "type": "keyword",
-          "ignore_above": 1024
+        "Date": {
+          "type": "date",
+          "format": "dd-MM-yyyy"
         },
-        "public": {
-          "type": "boolean"
+        "Rating": {
+          "type": "integer"
         },
-        "text": {
-          "type": "text"
-        },
-        "user": {
-          "properties": {
-            "id": {
-              "type": "keyword",
-              "ignore_above": 1024
-            },
-            "name": {
-              "type": "keyword",
-              "ignore_above": 1024
+        "ReviewTitle": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
             }
           }
         }
       }
     }
   },
-  ".internal.alerts-observability.uptime.alerts-default-000001": {
+  ".internal.alerts-default.alerts-default-000001": {
     "mappings": {
       "dynamic": "false",
       "_meta": {
@@ -34210,57 +34411,12 @@
           "type": "date",
           "ignore_malformed": false
         },
-        "agent": {
-          "properties": {
-            "name": {
-              "type": "keyword"
-            }
-          }
-        },
-        "anomaly": {
-          "properties": {
-            "bucket_span": {
-              "properties": {
-                "minutes": {
-                  "type": "keyword"
-                }
-              }
-            },
-            "start": {
-              "type": "date"
-            }
-          }
-        },
-        "configId": {
-          "type": "keyword"
-        },
-        "ecs": {
-          "properties": {
-            "version": {
-              "type": "keyword"
-            }
-          }
-        },
-        "error": {
-          "properties": {
-            "message": {
-              "type": "text"
-            }
-          }
-        },
         "event": {
           "properties": {
             "action": {
               "type": "keyword"
             },
             "kind": {
-              "type": "keyword"
-            }
-          }
-        },
-        "host": {
-          "properties": {
-            "name": {
               "type": "keyword"
             }
           }
@@ -34278,9 +34434,6 @@
                 "consecutive_matches": {
                   "type": "long"
                 },
-                "context": {
-                  "type": "object"
-                },
                 "duration": {
                   "properties": {
                     "us": {
@@ -34291,37 +34444,11 @@
                 "end": {
                   "type": "date"
                 },
-                "evaluation": {
-                  "properties": {
-                    "threshold": {
-                      "type": "scaled_float",
-                      "scaling_factor": 100.0
-                    },
-                    "value": {
-                      "type": "scaled_float",
-                      "scaling_factor": 100.0
-                    },
-                    "values": {
-                      "type": "scaled_float",
-                      "scaling_factor": 100.0
-                    }
-                  }
-                },
                 "flapping": {
                   "type": "boolean"
                 },
                 "flapping_history": {
                   "type": "boolean"
-                },
-                "group": {
-                  "properties": {
-                    "field": {
-                      "type": "keyword"
-                    },
-                    "value": {
-                      "type": "keyword"
-                    }
-                  }
                 },
                 "instance": {
                   "properties": {
@@ -34347,30 +34474,12 @@
                     }
                   }
                 },
-                "risk_score": {
-                  "type": "float"
-                },
                 "rule": {
                   "properties": {
-                    "author": {
-                      "type": "keyword"
-                    },
                     "category": {
                       "type": "keyword"
                     },
                     "consumer": {
-                      "type": "keyword"
-                    },
-                    "created_at": {
-                      "type": "date"
-                    },
-                    "created_by": {
-                      "type": "keyword"
-                    },
-                    "description": {
-                      "type": "keyword"
-                    },
-                    "enabled": {
                       "type": "keyword"
                     },
                     "execution": {
@@ -34383,19 +34492,7 @@
                         }
                       }
                     },
-                    "from": {
-                      "type": "keyword"
-                    },
-                    "interval": {
-                      "type": "keyword"
-                    },
-                    "license": {
-                      "type": "keyword"
-                    },
                     "name": {
-                      "type": "keyword"
-                    },
-                    "note": {
                       "type": "keyword"
                     },
                     "parameters": {
@@ -34405,17 +34502,8 @@
                     "producer": {
                       "type": "keyword"
                     },
-                    "references": {
-                      "type": "keyword"
-                    },
                     "revision": {
                       "type": "long"
-                    },
-                    "rule_id": {
-                      "type": "keyword"
-                    },
-                    "rule_name_override": {
-                      "type": "keyword"
                     },
                     "rule_type_id": {
                       "type": "keyword"
@@ -34423,28 +34511,10 @@
                     "tags": {
                       "type": "keyword"
                     },
-                    "to": {
-                      "type": "keyword"
-                    },
-                    "type": {
-                      "type": "keyword"
-                    },
-                    "updated_at": {
-                      "type": "date"
-                    },
-                    "updated_by": {
-                      "type": "keyword"
-                    },
                     "uuid": {
-                      "type": "keyword"
-                    },
-                    "version": {
                       "type": "keyword"
                     }
                   }
-                },
-                "severity": {
-                  "type": "keyword"
                 },
                 "severity_improving": {
                   "type": "boolean"
@@ -34453,32 +34523,6 @@
                   "type": "date"
                 },
                 "status": {
-                  "type": "keyword"
-                },
-                "suppression": {
-                  "properties": {
-                    "docs_count": {
-                      "type": "long"
-                    },
-                    "end": {
-                      "type": "date"
-                    },
-                    "start": {
-                      "type": "date"
-                    },
-                    "terms": {
-                      "properties": {
-                        "field": {
-                          "type": "keyword"
-                        },
-                        "value": {
-                          "type": "keyword"
-                        }
-                      }
-                    }
-                  }
-                },
-                "system_status": {
                   "type": "keyword"
                 },
                 "time_range": {
@@ -34496,19 +34540,10 @@
                 "workflow_assignee_ids": {
                   "type": "keyword"
                 },
-                "workflow_reason": {
-                  "type": "keyword"
-                },
                 "workflow_status": {
                   "type": "keyword"
                 },
-                "workflow_status_updated_at": {
-                  "type": "date"
-                },
                 "workflow_tags": {
-                  "type": "keyword"
-                },
-                "workflow_user": {
                   "type": "keyword"
                 }
               }
@@ -34521,96 +34556,261 @@
             }
           }
         },
-        "location": {
+        "tags": {
+          "type": "keyword"
+        }
+      }
+    }
+  },
+  ".internal.alerts-transform.health.alerts-default-000001": {
+    "mappings": {
+      "dynamic": "false",
+      "_meta": {
+        "namespace": "default",
+        "kibana": {
+          "version": "8.15.0"
+        },
+        "managed": true
+      },
+      "properties": {
+        "@timestamp": {
+          "type": "date",
+          "ignore_malformed": false
+        },
+        "event": {
           "properties": {
-            "id": {
+            "action": {
               "type": "keyword"
             },
-            "name": {
+            "kind": {
               "type": "keyword"
             }
           }
         },
-        "monitor": {
+        "kibana": {
           "properties": {
-            "id": {
-              "type": "keyword"
-            },
-            "name": {
-              "type": "keyword"
-            },
-            "tags": {
-              "type": "keyword"
-            },
-            "type": {
-              "type": "keyword"
-            }
-          }
-        },
-        "observer": {
-          "properties": {
-            "geo": {
+            "alert": {
               "properties": {
-                "name": {
+                "action_group": {
+                  "type": "keyword"
+                },
+                "case_ids": {
+                  "type": "keyword"
+                },
+                "consecutive_matches": {
+                  "type": "long"
+                },
+                "duration": {
+                  "properties": {
+                    "us": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "end": {
+                  "type": "date"
+                },
+                "flapping": {
+                  "type": "boolean"
+                },
+                "flapping_history": {
+                  "type": "boolean"
+                },
+                "instance": {
+                  "properties": {
+                    "id": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "last_detected": {
+                  "type": "date"
+                },
+                "maintenance_window_ids": {
+                  "type": "keyword"
+                },
+                "previous_action_group": {
+                  "type": "keyword"
+                },
+                "reason": {
+                  "type": "keyword",
+                  "fields": {
+                    "text": {
+                      "type": "match_only_text"
+                    }
+                  }
+                },
+                "results": {
+                  "dynamic": "false",
+                  "properties": {
+                    "description": {
+                      "type": "text"
+                    },
+                    "health_status": {
+                      "type": "keyword"
+                    },
+                    "issues": {
+                      "type": "object"
+                    },
+                    "node_name": {
+                      "type": "keyword"
+                    },
+                    "transform_id": {
+                      "type": "keyword"
+                    },
+                    "transform_state": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "rule": {
+                  "properties": {
+                    "category": {
+                      "type": "keyword"
+                    },
+                    "consumer": {
+                      "type": "keyword"
+                    },
+                    "execution": {
+                      "properties": {
+                        "timestamp": {
+                          "type": "date"
+                        },
+                        "uuid": {
+                          "type": "keyword"
+                        }
+                      }
+                    },
+                    "name": {
+                      "type": "keyword"
+                    },
+                    "parameters": {
+                      "type": "flattened",
+                      "ignore_above": 4096
+                    },
+                    "producer": {
+                      "type": "keyword"
+                    },
+                    "revision": {
+                      "type": "long"
+                    },
+                    "rule_type_id": {
+                      "type": "keyword"
+                    },
+                    "tags": {
+                      "type": "keyword"
+                    },
+                    "uuid": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "severity_improving": {
+                  "type": "boolean"
+                },
+                "start": {
+                  "type": "date"
+                },
+                "status": {
+                  "type": "keyword"
+                },
+                "time_range": {
+                  "type": "date_range",
+                  "format": "epoch_millis||strict_date_optional_time"
+                },
+                "url": {
+                  "type": "keyword",
+                  "index": false,
+                  "ignore_above": 2048
+                },
+                "uuid": {
+                  "type": "keyword"
+                },
+                "workflow_assignee_ids": {
+                  "type": "keyword"
+                },
+                "workflow_status": {
+                  "type": "keyword"
+                },
+                "workflow_tags": {
                   "type": "keyword"
                 }
               }
+            },
+            "space_ids": {
+              "type": "keyword"
+            },
+            "version": {
+              "type": "version"
             }
           }
         },
         "tags": {
           "type": "keyword"
-        },
-        "tls": {
-          "properties": {
-            "server": {
-              "properties": {
-                "hash": {
-                  "properties": {
-                    "sha256": {
-                      "type": "keyword"
-                    }
-                  }
-                },
-                "x509": {
-                  "properties": {
-                    "issuer": {
-                      "properties": {
-                        "common_name": {
-                          "type": "keyword"
-                        }
-                      }
-                    },
-                    "not_after": {
-                      "type": "date"
-                    },
-                    "not_before": {
-                      "type": "date"
-                    },
-                    "subject": {
-                      "properties": {
-                        "common_name": {
-                          "type": "keyword"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "url": {
-          "properties": {
-            "full": {
-              "type": "keyword"
-            }
-          }
         }
       }
     }
   },
-  ".internal.alerts-observability.logs.alerts-default-000001": {
+  "cars_new": {
+    "mappings": {
+      "properties": {
+        "color": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "fuel_type": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "make": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "mileage(kilometers)": {
+          "type": "float"
+        },
+        "priceUSD": {
+          "type": "float"
+        },
+        "segment": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "transmission": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "volume(cm3)": {
+          "type": "float"
+        },
+        "year": {
+          "type": "date",
+          "format": "yyyy"
+        }
+      }
+    }
+  },
+  ".internal.alerts-observability.metrics.alerts-default-000001": {
     "mappings": {
       "dynamic": "false",
       "_meta": {
@@ -42645,202 +42845,6 @@
               "ignore_above": 1024
             }
           }
-        }
-      }
-    }
-  },
-  "reviews_new": {
-    "mappings": {
-      "properties": {
-        "CompleteReview": {
-          "type": "text",
-          "fields": {
-            "keyword": {
-              "type": "keyword",
-              "ignore_above": 256
-            }
-          }
-        },
-        "Date": {
-          "type": "date",
-          "format": "dd-MM-yyyy"
-        },
-        "Rating": {
-          "type": "integer"
-        },
-        "ReviewTitle": {
-          "type": "text",
-          "fields": {
-            "keyword": {
-              "type": "keyword"
-            }
-          }
-        }
-      }
-    }
-  },
-  ".internal.alerts-default.alerts-default-000001": {
-    "mappings": {
-      "dynamic": "false",
-      "_meta": {
-        "namespace": "default",
-        "kibana": {
-          "version": "8.15.0"
-        },
-        "managed": true
-      },
-      "properties": {
-        "@timestamp": {
-          "type": "date",
-          "ignore_malformed": false
-        },
-        "event": {
-          "properties": {
-            "action": {
-              "type": "keyword"
-            },
-            "kind": {
-              "type": "keyword"
-            }
-          }
-        },
-        "kibana": {
-          "properties": {
-            "alert": {
-              "properties": {
-                "action_group": {
-                  "type": "keyword"
-                },
-                "case_ids": {
-                  "type": "keyword"
-                },
-                "consecutive_matches": {
-                  "type": "long"
-                },
-                "duration": {
-                  "properties": {
-                    "us": {
-                      "type": "long"
-                    }
-                  }
-                },
-                "end": {
-                  "type": "date"
-                },
-                "flapping": {
-                  "type": "boolean"
-                },
-                "flapping_history": {
-                  "type": "boolean"
-                },
-                "instance": {
-                  "properties": {
-                    "id": {
-                      "type": "keyword"
-                    }
-                  }
-                },
-                "last_detected": {
-                  "type": "date"
-                },
-                "maintenance_window_ids": {
-                  "type": "keyword"
-                },
-                "previous_action_group": {
-                  "type": "keyword"
-                },
-                "reason": {
-                  "type": "keyword",
-                  "fields": {
-                    "text": {
-                      "type": "match_only_text"
-                    }
-                  }
-                },
-                "rule": {
-                  "properties": {
-                    "category": {
-                      "type": "keyword"
-                    },
-                    "consumer": {
-                      "type": "keyword"
-                    },
-                    "execution": {
-                      "properties": {
-                        "timestamp": {
-                          "type": "date"
-                        },
-                        "uuid": {
-                          "type": "keyword"
-                        }
-                      }
-                    },
-                    "name": {
-                      "type": "keyword"
-                    },
-                    "parameters": {
-                      "type": "flattened",
-                      "ignore_above": 4096
-                    },
-                    "producer": {
-                      "type": "keyword"
-                    },
-                    "revision": {
-                      "type": "long"
-                    },
-                    "rule_type_id": {
-                      "type": "keyword"
-                    },
-                    "tags": {
-                      "type": "keyword"
-                    },
-                    "uuid": {
-                      "type": "keyword"
-                    }
-                  }
-                },
-                "severity_improving": {
-                  "type": "boolean"
-                },
-                "start": {
-                  "type": "date"
-                },
-                "status": {
-                  "type": "keyword"
-                },
-                "time_range": {
-                  "type": "date_range",
-                  "format": "epoch_millis||strict_date_optional_time"
-                },
-                "url": {
-                  "type": "keyword",
-                  "index": false,
-                  "ignore_above": 2048
-                },
-                "uuid": {
-                  "type": "keyword"
-                },
-                "workflow_assignee_ids": {
-                  "type": "keyword"
-                },
-                "workflow_status": {
-                  "type": "keyword"
-                },
-                "workflow_tags": {
-                  "type": "keyword"
-                }
-              }
-            },
-            "space_ids": {
-              "type": "keyword"
-            },
-            "version": {
-              "type": "version"
-            }
-          }
-        },
-        "tags": {
-          "type": "keyword"
         }
       }
     }

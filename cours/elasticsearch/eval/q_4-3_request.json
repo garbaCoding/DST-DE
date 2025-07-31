@@ -1,0 +1,17 @@
+{
+  "size": 0,
+  "aggs": {
+    "par_class_name": {
+      "terms": {
+        "field": "Class Name.keyword"
+      },
+      "aggs": {
+        "stats_rating": {
+          "stats": {
+            "field": "Rating"
+          }
+        }
+      }
+    }
+  }
+}

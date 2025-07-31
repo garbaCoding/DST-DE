@@ -1,0 +1,274 @@
+{
+  "took": 1,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 10000,
+      "relation": "gte"
+    },
+    "max_score": null,
+    "hits": []
+  },
+  "aggregations": {
+    "age_distribution": {
+      "buckets": [
+        {
+          "key": 0.0,
+          "doc_count": 44,
+          "stat_par_age": {
+            "doc_count_error_upper_bound": 0,
+            "sum_other_doc_count": 5,
+            "buckets": [
+              {
+                "key": "Dresses",
+                "doc_count": 13
+              },
+              {
+                "key": "Knits",
+                "doc_count": 7
+              },
+              {
+                "key": "Blouses",
+                "doc_count": 4
+              },
+              {
+                "key": "Skirts",
+                "doc_count": 3
+              },
+              {
+                "key": "Intimates",
+                "doc_count": 2
+              },
+              {
+                "key": "Jeans",
+                "doc_count": 2
+              },
+              {
+                "key": "Pants",
+                "doc_count": 2
+              },
+              {
+                "key": "Shorts",
+                "doc_count": 2
+              },
+              {
+                "key": "Sweaters",
+                "doc_count": 2
+              },
+              {
+                "key": "Swim",
+                "doc_count": 2
+              }
+            ]
+          }
+        },
+        {
+          "key": 20.0,
+          "doc_count": 10589,
+          "stat_par_age": {
+            "doc_count_error_upper_bound": 0,
+            "sum_other_doc_count": 954,
+            "buckets": [
+              {
+                "key": "Dresses",
+                "doc_count": 3101
+              },
+              {
+                "key": "Knits",
+                "doc_count": 2108
+              },
+              {
+                "key": "Blouses",
+                "doc_count": 1269
+              },
+              {
+                "key": "Pants",
+                "doc_count": 571
+              },
+              {
+                "key": "Sweaters",
+                "doc_count": 571
+              },
+              {
+                "key": "Jeans",
+                "doc_count": 485
+              },
+              {
+                "key": "Skirts",
+                "doc_count": 453
+              },
+              {
+                "key": "Fine gauge",
+                "doc_count": 423
+              },
+              {
+                "key": "Lounge",
+                "doc_count": 335
+              },
+              {
+                "key": "Jackets",
+                "doc_count": 319
+              }
+            ]
+          }
+        },
+        {
+          "key": 40.0,
+          "doc_count": 10075,
+          "stat_par_age": {
+            "doc_count_error_upper_bound": 0,
+            "sum_other_doc_count": 679,
+            "buckets": [
+              {
+                "key": "Dresses",
+                "doc_count": 2584
+              },
+              {
+                "key": "Knits",
+                "doc_count": 2088
+              },
+              {
+                "key": "Blouses",
+                "doc_count": 1413
+              },
+              {
+                "key": "Pants",
+                "doc_count": 644
+              },
+              {
+                "key": "Sweaters",
+                "doc_count": 641
+              },
+              {
+                "key": "Jeans",
+                "doc_count": 555
+              },
+              {
+                "key": "Fine gauge",
+                "doc_count": 525
+              },
+              {
+                "key": "Skirts",
+                "doc_count": 387
+              },
+              {
+                "key": "Lounge",
+                "doc_count": 280
+              },
+              {
+                "key": "Jackets",
+                "doc_count": 279
+              }
+            ]
+          }
+        },
+        {
+          "key": 60.0,
+          "doc_count": 2669,
+          "stat_par_age": {
+            "doc_count_error_upper_bound": 0,
+            "sum_other_doc_count": 172,
+            "buckets": [
+              {
+                "key": "Knits",
+                "doc_count": 618
+              },
+              {
+                "key": "Dresses",
+                "doc_count": 594
+              },
+              {
+                "key": "Blouses",
+                "doc_count": 399
+              },
+              {
+                "key": "Sweaters",
+                "doc_count": 202
+              },
+              {
+                "key": "Pants",
+                "doc_count": 167
+              },
+              {
+                "key": "Fine gauge",
+                "doc_count": 144
+              },
+              {
+                "key": "Jackets",
+                "doc_count": 102
+              },
+              {
+                "key": "Jeans",
+                "doc_count": 101
+              },
+              {
+                "key": "Skirts",
+                "doc_count": 100
+              },
+              {
+                "key": "Lounge",
+                "doc_count": 70
+              }
+            ]
+          }
+        },
+        {
+          "key": 80.0,
+          "doc_count": 109,
+          "stat_par_age": {
+            "doc_count_error_upper_bound": 0,
+            "sum_other_doc_count": 8,
+            "buckets": [
+              {
+                "key": "Dresses",
+                "doc_count": 27
+              },
+              {
+                "key": "Knits",
+                "doc_count": 22
+              },
+              {
+                "key": "Blouses",
+                "doc_count": 12
+              },
+              {
+                "key": "Sweaters",
+                "doc_count": 12
+              },
+              {
+                "key": "Fine gauge",
+                "doc_count": 7
+              },
+              {
+                "key": "Lounge",
+                "doc_count": 5
+              },
+              {
+                "key": "Outerwear",
+                "doc_count": 5
+              },
+              {
+                "key": "Jeans",
+                "doc_count": 4
+              },
+              {
+                "key": "Pants",
+                "doc_count": 4
+              },
+              {
+                "key": "Jackets",
+                "doc_count": 3
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
