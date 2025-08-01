@@ -3,3 +3,5 @@ cours/noSQL/sample_training/diagnostic.data/
 cours/noSQL/sample_training/journal/
 cours/noSQL/sample_training/.bash_history
 cours/noSQL/sample_training/*
+cours/redis/data/dump.rdb
+
