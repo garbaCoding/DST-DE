@@ -1,13 +1,16 @@
 services:
   redis:
     container_name: redis
-    image: redis:latest
+    image: redis:7.2.0
     networks:
       - redis_network
     ports:
       - '6379:6379'
     volumes:
-      - ./data:/data
+      - ./srcs/data:/data
+      - ./srcs/conf:/etc/redis_conf
+      - ./srcs/modules:/lib/redis_modules
+    command: [ "redis-server", "/etc/redis_conf/redis_7.2.conf" ]
 
 networks:
   redis_network:

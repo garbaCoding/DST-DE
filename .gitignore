@@ -4,4 +4,6 @@ cours/noSQL/sample_training/journal/
 cours/noSQL/sample_training/.bash_history
 cours/noSQL/sample_training/*
 cours/redis/data/dump.rdb
-
+cours/redis/srcs/data/dump.rdb
+cours/redis/srcs/data/redis_backup.rdb
+cours/redis/srcs/data/redis_debug.log
