@@ -1,0 +1,5 @@
+{"id": 0, "order_time": "2025-08-15 05:06:54", "shop": "Mammamia Pizza", "name": "Paul Odom", "phoneNumber": "(783)667-3851", "address": "USS Chase\nFPO AE 76544", "pizzas": {"pizzaName": "Calzone", "price": 10}}
+{"id": 1, "order_time": "2025-08-15 05:06:54", "shop": "Its-a me! Mario Pizza!", "name": "Steve Morse", "phoneNumber": "669-441-5743", "address": "3417 Green Ridge\nNew Anthonyburgh, PA 73041", "pizzas": {"pizzaName": "Mari & Monti", "price": 12}}
+{"id": 2, "order_time": "2025-08-15 05:06:54", "shop": "Marios Pizza", "name": "Erica Small", "phoneNumber": "589.301.2736x201", "address": "USNS Hahn\nFPO AE 17725", "pizzas": {"pizzaName": "Marinara", "price": 8}}
+{"id": 3, "order_time": "2025-08-15 05:06:54", "shop": "Its-a me! Mario Pizza!", "name": "Scott Jackson", "phoneNumber": "233.490.0409x97112", "address": "88362 Miller Alley\nAshleystad, NV 15535", "pizzas": {"pizzaName": "Margherita", "price": 9}}
+{"id": 4, "order_time": "2025-08-15 05:06:54", "shop": "Dominos Pizza", "name": "John Murillo", "phoneNumber": "001-842-902-6017x0021", "address": "12816 John Center\nHarmonberg, IA 88333", "pizzas": {"pizzaName": "Diavola", "price": 11}}

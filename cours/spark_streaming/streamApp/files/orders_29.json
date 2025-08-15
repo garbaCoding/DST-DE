@@ -1,0 +1,4 @@
+{"id": 0, "order_time": "2025-08-15 05:07:03", "shop": "Marios Pizza", "name": "Brian Mitchell", "phoneNumber": "573.492.5458", "address": "PSC 3452, Box 2726\nAPO AP 07046", "pizzas": {"pizzaName": "Mari & Monti", "price": 12}}
+{"id": 1, "order_time": "2025-08-15 05:07:03", "shop": "Circular Pi Pizzeria", "name": "David Mendez", "phoneNumber": "+1-620-361-4590", "address": "9791 Jenna Views\nLake Courtney, VI 14657", "pizzas": {"pizzaName": "Margherita", "price": 9}}
+{"id": 2, "order_time": "2025-08-15 05:07:03", "shop": "Mammamia Pizza", "name": "Breanna Miller", "phoneNumber": "001-729-655-9425x40352", "address": "31528 Rivera Track\nAshleyport, KY 82902", "pizzas": {"pizzaName": "Capri", "price": 10}}
+{"id": 3, "order_time": "2025-08-15 05:07:03", "shop": "Luigis Pizza", "name": "Blake Rose", "phoneNumber": "808-515-5705", "address": "696 Elizabeth Crescent Apt. 003\nSuttonhaven, NM 07172", "pizzas": {"pizzaName": "Mari & Monti", "price": 12}}

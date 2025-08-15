@@ -1,0 +1,3 @@
+{"id": 0, "order_time": "2025-08-15 05:06:48", "shop": "Its-a me! Mario Pizza!", "name": "Patrick Davis", "phoneNumber": "(515)255-0399", "address": "40800 Gonzalez Squares\nNorth Amanda, PR 44310", "pizzas": {"pizzaName": "Diavola", "price": 11}}
+{"id": 1, "order_time": "2025-08-15 05:06:48", "shop": "Dominos Pizza", "name": "Leslie Cordova", "phoneNumber": "(496)372-7792x145", "address": "46610 Stacy Junction Suite 187\nNew Brittany, FL 13886", "pizzas": {"pizzaName": "Salami", "price": 12}}
+{"id": 2, "order_time": "2025-08-15 05:06:48", "shop": "Pizza Hut", "name": "James Kaufman", "phoneNumber": "334.478.5199x9237", "address": "63277 John Point Suite 347\nNew Charles, OR 72711", "pizzas": {"pizzaName": "Mari & Monti", "price": 12}}

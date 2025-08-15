@@ -1,0 +1,4 @@
+{"id": 0, "order_time": "2025-08-15 05:05:42", "shop": "Marios Pizza", "name": "Gary Johnson", "phoneNumber": "+1-673-373-1542x4252", "address": "54235 Stevens Hill\nChristopherton, VT 00965", "pizzas": {"pizzaName": "Pepperoni", "price": 13}}
+{"id": 1, "order_time": "2025-08-15 05:05:42", "shop": "Pizza Hut", "name": "Luke Miller", "phoneNumber": "+1-577-852-1810", "address": "85628 Boone Expressway\nSouth James, PW 09165", "pizzas": {"pizzaName": "Salami", "price": 12}}
+{"id": 2, "order_time": "2025-08-15 05:05:42", "shop": "Dominos Pizza", "name": "Karen Jacobs", "phoneNumber": "645-710-4464x285", "address": "4380 Whitehead Radial Apt. 285\nNathanland, SC 24785", "pizzas": {"pizzaName": "Marinara", "price": 8}}
+{"id": 3, "order_time": "2025-08-15 05:05:42", "shop": "Luigis Pizza", "name": "Vickie Lynch", "phoneNumber": "632.883.9154", "address": "66929 Perez Knoll Suite 521\nNew Hunter, CT 20880", "pizzas": {"pizzaName": "Capri", "price": 10}}
