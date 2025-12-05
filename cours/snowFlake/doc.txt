@@ -1,0 +1,56 @@
+TRANSFORMATION EN SCHÉMA EN ÉTOILE - ANALYSE DES TRACKS SUR LES CDS
+=====================================================================
+
+ÉTAPE 1 : IDENTIFICATION DU PROCESSUS MÉTIER
+---------------------------------------------
+Processus métier : Analyse des ventes et de la disponibilité des tracks musicaux sur les CDs.
+Grain : Chaque track présent sur un CD (niveau le plus détaillé).
+
+ÉTAPE 2 : IDENTIFICATION DES DIMENSIONS
+----------------------------------------
+Les dimensions identifiées pour l'analyse des tracks :
+
+1. Dimension TRACK (dim_track)
+   - Informations sur le morceau de musique
+   - Attributs : title, length, rating
+   
+2. Dimension CD (dim_cd)
+   - Informations sur le CD contenant le track
+   - Attributs : title, label, release_date, price
+   
+3. Dimension ARTIST (dim_artist)
+   - Informations sur l'artiste
+   - Attributs : name, country
+   
+4. Dimension GENRE (dim_genre)
+   - Informations sur le genre musical
+   - Attributs : genre_name, description
+   
+5. Dimension TIME (dim_time)
+   - Décomposition temporelle de la date de sortie
+   - Attributs : date, year, quarter, month, day
+
+ÉTAPE 3 : IDENTIFICATION DES FAITS
+-----------------------------------
+Table de faits : fact_track_cd
+
+Faits (mesures) :
+- track_position : position du track sur le CD
+- track_length : durée du track (en secondes)
+- track_rating : note du track
+- cd_price : prix du CD
+- quantity_sold : nombre de ventes (si disponible)
+
+ÉTAPE 4 : CONSTRUCTION DU MODÈLE
+---------------------------------
+La table de faits (fact_track_cd) est au centre et contient :
+- Les clés étrangères vers toutes les dimensions
+- Les mesures quantitatives
+
+ÉTAPE 5 : DÉNORMALISATION ET AGRÉGATION
+----------------------------------------
+- Les dimensions sont dénormalisées pour faciliter les requêtes
+- Chaque dimension contient tous les attributs descriptifs nécessaires
+- Les données redondantes sont acceptées pour optimiser les performances de lecture
+
+

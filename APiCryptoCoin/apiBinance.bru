@@ -1,0 +1,24 @@
+meta {
+  name: apiBinance
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=volume_desc&per_page=100&page=1&x_cg_demo_api_key=CG-Mh1tJJ7kZt8U8wvGTME1wsJj
+  body: none
+  auth: inherit
+}
+
+params:query {
+  vs_currency: usd
+  order: volume_desc
+  per_page: 100
+  page: 1
+  x_cg_demo_api_key: CG-Mh1tJJ7kZt8U8wvGTME1wsJj
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
