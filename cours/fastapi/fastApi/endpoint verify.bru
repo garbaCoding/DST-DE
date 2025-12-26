@@ -1,0 +1,19 @@
+meta {
+  name: endpoint verify
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:8000/verify
+  body: none
+  auth: inherit
+}
+
+headers {
+  "accept:": 
+}
+
+settings {
+  encodeUrl: false
+}

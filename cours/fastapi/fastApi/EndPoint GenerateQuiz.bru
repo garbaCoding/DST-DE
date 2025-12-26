@@ -1,0 +1,32 @@
+meta {
+  name: EndPoint GenerateQuiz
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8000/generate_quiz
+  body: json
+  auth: inherit
+}
+
+headers {
+  accept: application/json
+  Content-Type: application/json
+  Authorization: Basic $(echo -n 'alice:wonderland' | base64)
+}
+
+body:json {
+  {
+    "test_type": "multiple_choice",
+    "categories": [
+      "math",
+      "history"
+    ],
+    "number_of_questions": 5
+  }
+}
+
+settings {
+  encodeUrl: false
+}

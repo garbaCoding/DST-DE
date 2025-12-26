@@ -1,0 +1,36 @@
+meta {
+  name: quiz
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8000/generate_quiz
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: clementine
+  password: mandarine
+}
+
+body:json {
+  {
+    "test_type": "Test de positionnement",
+    "categories": [
+      "BDD",
+      "Docker"
+    ],
+    "number_of_questions": 5
+  }
+}
+
+settings {
+  encodeUrl: false
+  timeout: 0
+}

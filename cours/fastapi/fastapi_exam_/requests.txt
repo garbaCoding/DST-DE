@@ -1,0 +1,97 @@
+# ----------------------------------------------------
+# --- Endpoints de l'API de Questionnaires ---
+# ----------------------------------------------------
+
+# Test de l'endpoint GET /verify
+curl -X GET "http://localhost:8000/verify" -H "Accept: application/json"
+
+# Test de l'endpoint POST /generate_quiz (Succès)
+# ---------------------------------------------------------------------------------------
+curl -X POST "http://localhost:8000/generate_quiz" \
+     -H "Accept: application/json" \
+     -H "Content-Type: application/json" \
+     -H "Authorization: Basic $(echo -n 'bob:builder' | base64)" \
+     -d '{
+           "test_type": "Test de positionnement",
+           "categories": ["BDD", "Docker"],
+           "number_of_questions": 5
+         }'
+
+# Test de l'endpoint POST /generate_quiz (Authentification Invalide - 401 Unauthorized)
+# ---------------------------------------------------------------------------------------
+curl -X POST "http://localhost:8000/generate_quiz" \
+     -H "Accept: application/json" \
+     -H "Content-Type: application/json" \
+     -H "Authorization: Basic $(echo -n 'baduser:badpass' | base64)" \
+     -d '{
+           "test_type": "Test de positionnement",
+           "categories": ["BDD", "Docker"],
+           "number_of_questions": 5
+         }'
+
+# Test de l'endpoint POST /generate_quiz (Aucune Catégorie Fournie - 400 Bad Request)
+# ---------------------------------------------------------------------------------------
+curl -X POST "http://localhost:8000/generate_quiz" \
+     -H "Accept: application/json" \
+     -H "Content-Type: application/json" \
+     -H "Authorization: Basic $(echo -n 'bob:builder' | base64)" \
+     -d '{
+           "test_type": "Test de positionnement",
+           "categories": [],
+           "number_of_questions": 10
+         }'
+
+# Test de l'endpoint POST /generate_quiz (Nombre de Questions Invalide - 400 Bad Request)
+# ---------------------------------------------------------------------------------------
+curl -X POST "http://localhost:8000/generate_quiz" \
+     -H "Accept: application/json" \
+     -H "Content-Type: application/json" \
+     -H "Authorization: Basic $(echo -n 'clementine:mandarine' | base64)" \
+     -d '{
+           "test_type": "Test de positionnement",
+           "categories": ["Docker"],
+           "number_of_questions": 7
+         }'
+
+# Test de l'endpoint POST /generate_quiz (Aucune Question Correspondante - 404 Not Found)
+# ---------------------------------------------------------------------------------------
+curl -X POST "http://localhost:8000/generate_quiz" \
+     -H "Accept: application/json" \
+     -H "Content-Type: application/json" \
+     -H "Authorization: Basic $(echo -n 'alice:wonderland' | base64)" \
+     -d '{
+           "test_type": "non_existent_type",
+           "categories": ["fake_category"],
+           "number_of_questions": 5
+         }'
+
+# Test de l'endpoint POST /generate_quiz (Pas Assez de Questions Disponibles - 400 Bad Request)
+# ---------------------------------------------------------------------------------------------
+curl -X POST "http://localhost:8000/generate_quiz" \
+     -H "Accept: application/json" \
+     -H "Content-Type: application/json" \
+     -H "Authorization: Basic $(echo -n 'bob:builder' | base64)" \
+     -d '{
+           "test_type": "Total Bootcamp",
+           "categories": ["Data Science"],
+           "number_of_questions": 20
+         }'
+
+# ----------------------------------------------------
+# --- Endpoint /create_question ---
+# ----------------------------------------------------
+curl -X POST "http://localhost:8000/create_question" \
+     -H "Accept: application/json" \
+     -H "Content-Type: application/json" \
+     -d '{
+           "admin_username": "admin",
+           "admin_password": "4dm1N",
+           "question": "En quoi est écrit Jenkins",
+           "subject": "Automation",
+           "correct": ["Java"],
+           "use": "Test de validation",
+           "responseA": "Tcl",
+           "responseB": "Java",
+           "responseC": "Python",
+           "responseD": "Rust"
+         }'
